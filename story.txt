@@ -8,19 +8,19 @@ out there. You are anxoius and shaken, what is your next step:"
 Tile 2 crossroad
 print "Right infront of you is a crossroad, you peak to left and see a light shining through the trees, straight ahead theres only trees and to the right theres a cave. What option will go for?"
 1. Go left and see what the lights are = Tile 3 Cabin
-2. Go right into the cave = Tile 4 Mountain Lion
+2. Go right into the cave = Tile 4 wolf
 3. Keep heading straight
 
 Tile 3 cabin
 print "When you arrive at the source of the lights there is a clearing and in the middle is a creepy looking cabin, you dont see any movement inside, what will you do?
-1. Try you luck and search the cabin? = Tile 2 (loot handgun)
+1. Try you luck and search the cabin? = Tile 2 (loot knife)
 2. That looks to scary i will head back to crossroad = Tile 2
 
-Tile 4 mountain_lion
-print "In the darkness of the cave you suddenly hears a big roar!! A mountain lion appears and wants you for its dinner! Now is the time to be brave or smart, what will you do?"
-1. Fight with my fists = **You can kill a mountain lion with your fists, you died!**
+Tile 4 wolf
+print "In the darkness of the cave you suddenly hears a big roar!! A big wolf appears and wants you for its dinner! Now is the time to be brave or smart, what will you do?"
+1. Fight with my fists = **You cant kill a wolf with your fists, you died!**
 2. RUN! = 50 % getting back to crossroads
-3. Use my handgun! = kill mountain lion and returns back to crossroads.
+3. Use my knife! = kill the wolf and returns back to crossroads.
 
 Tile 5 meadow
 print "You clear the forest and come up to a big meadow, far off in the distance to left you see a treehouse, if you look right you can see the ocean, theres also some sort of structure ahead of the meadow in the forest. Whats your plan of action?"
@@ -30,7 +30,7 @@ print "You clear the forest and come up to a big meadow, far off in the distance
 
 Tile 6 treehouse
 print "Far up in the trees you see a treehouse, must be atleast 20 years old accordning to the state of it. What will you do?"
-1. Climb the treehouse and have a look = Tile 5 loot(shotgun) 
+1. Climb the treehouse and have a look = Tile 5 loot(pistol) 
 2. Go back to the meadow = Tile 5
 3. Climb up and stay the night = **You freezed to DEATH**
 
@@ -39,8 +39,8 @@ print "You enter the big tree structure at the end of the meadow, not your best 
 are now standing infront of a huge bigfoot who plan to have you as a snack. What will you do?"
 1. Fight with my bare fists = **You cant fight a bigfoot with your fists, you died!**
 2. RUN! = **You cant outrun bigfoot you fool, you died!**
-3. Use my handgun = **A simple handgun wont stop a bigfoot, you died!**
-4. Use my shotgun = The bigfoot dies in agaony of the gunshot! Tile 5 bigfoot dead(loot compass)
+3. Use my knife = **A simple knife wont stop a bigfoot, you died!**
+4. Use my pistol = The bigfoot dies in agaony of the gunshot! Tile 5 bigfoot dead(loot compass)
 
 Tile 8 Ocean
 print "Theres a lovely breeze when you finally arrive at the ocean, a long beautiful beach with white sand. and if you look 
