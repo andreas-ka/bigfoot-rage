@@ -1,33 +1,41 @@
 import random
 
-def main():
-    username = display_intro()
-    display_intro()
-    start_game_tile_one()
 
+def main():
+    display_intro()
+    username = display_intro()
+    start_game_tile_one()
+    crossroad_tile_two()
+    cabin_tile_three()
+
+
+# Classes for character and enemies
 class Character:
-	def __init__(self, name, health, strength):
-		Character.name = username
-		Character.health = health
-		Character.strength = strength
+    def __init__(self, name, health, strength):
+        Character.name = username
+        Character.health = health
+        Character.strength = strength
+
 
 class Wolf:
-	def __init__(self, health, strength):
-		Wolf.health = health
-		Wolf.strength = strength
+    def __init__(self, health, strength):
+        Wolf.health = health
+        Wolf.strength = strength
+
 
 class Bigfoot:
-	def __init__(self, health, strength):
-		Bigfoot.health = health
-		Bigfoot.strength = strength
+    def __init__(self, health, strength):
+        Bigfoot.health = health
+        Bigfoot.strength = strength
+
 
 class Loot:
-	def __init__(self, strength, health):
-		Loot.strength = strength
-		Loot.health = health
+    def __init__(self, strength, health):
+        Loot.strength = strength
+        Loot.health = health
 
 
-# The welcoming section, let's you choose your name
+# The welcoming section, let's you choose your name.
 def display_intro():
     print(logo_img)
     print("Welcome to the text based adventure game that is Bigfoot Rage!")
@@ -38,7 +46,7 @@ def display_intro():
 
     return user_name
 
-# Start of the game, Tile 1
+# Start of the game, Tile 1, first part of the story.
 def start_game_tile_one():
     print("You suddenly wake up, all confused and don't know where you are,")
     print("when you poke your head out of the tent all you see is dense thick forest surrounding you,")
@@ -59,30 +67,38 @@ def start_game_tile_one():
         else:
             option == ""
             print("Please pick 1 or 2")
+            break
 
-    
-# Crossroads Tile 2, Here the user will be greeted with 3 options
+
+# Crossroads Tile 2, Here the user will be greeted with 3 options.
 def crossroad_tile_two():
     print("Right infront of you is a crossroad, you peak to left and see a light shining through the trees,")
     print("straight ahead theres only trees and to the right theres a cave. What option will go for?\n")
     print("1. Go left and see what the lights are coming from")
     print("2. I want to explore the cave to the right")
-    print("3. Continue on the straight path")
-    while option != "1" and option != "2" and option != "3":
-        option = input("Which option do you pick 1, 2 or 3? ")
-        if option == "1":
-            print("You chose to go towards the lights...")
-            cabin_tile_three()
-        elif option == "2":
-            print("You chose to head to the cave...")
-            wolf_den_tile_four()
-        elif option == "3":
-            print("You chose to continue walking straight...")
-        else:
-            option == ""
-            print("Please pick 1, 2 or 3")
+    print("3. Continue on the straight path\n")
+    option = input("Which option do you pick 1, 2 or 3? ")
+    if option == "1":
+        print("You chose to go towards the lights...")
+        cabin_tile_three()
+    elif option == "2":
+        print("You chose to head to the cave...")
+        wolf_den_tile_four()
+    elif option == "3":
+        print("You chose to continue walking straight...")
+        meadow_tile_five()
+    else:
+        option == ""
+        print("Please pick 1, 2 or 3")
+        break
 
-    
+
+#First tile in the game where the user is able to loot an item.
+def cabin_tile_three():
+    print(cabin_img)
+    print("When you arrive at the source of the lights there is a clearing and in the middle is a creepy looking cabin,")
+    print("you dont see any movement inside and its all quiet, what will you do?\n")
+
 
 
 
@@ -134,12 +150,7 @@ cabin_img = (r"""\
 ═════════█▒▒▒▒▒██████▒▒▒▒████████▒▒▒█
 ═════════█▒▒▒▒▒██████▒▒▒▒████████▒▒▒█
 ═════════█▒▒▒▒▒██████▒▒▒▒████████▒▒▒█
-═════════█▒▒▒▒▒██████▒▒▒▒████████▒▒▒█
 ██████████▒▒▒▒▒██████▒▒▒▒████████▒▒▒███████
-██████████▒▒▒▒▒██████▒▒▒▒████████▒▒▒███████
-██████████▒▒▒▒▒██████▒▒▒▒████████▒▒▒███████
-██████████▒▒▒▒▒██████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒███████
-██████████▒▒▒▒▒██████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒███████
 ██████████▒▒▒▒▒██████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒███████
 ██████████▒▒▒▒▒██████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒███████
 ██████████▒▒▒▒▒██████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒███████
