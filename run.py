@@ -1,8 +1,28 @@
-# Your code goes here.
-# You can delete these comments, but do not change the name of this file
-# Write your code to expect a terminal of 80 characters wide and 24 rows high
-
 import random
+
+#The welcoming section, let's you choose your name
+def displayIntro():
+    print(logo_img)
+    print("Welcome to the text based adventure game that is Bigfoot Rage!")
+    print("Can you make it out of the forrest alive?\n")
+    print("What's you name fellow traveller?")
+    user_name = input("")
+    print("Oh i see, your name is " + user_name)
+
+#Start of the game, Tile 1
+def startGameTileOne():
+    print("You suddenly wake up, all confused and don't know where you are,")
+    print("when you poke your head out of the tent all you see is dense thick forrest surrounding you,")
+    print("the tent only contains a blanket and all your possesions are gone, wind is blowing and its really cold out there.")
+    print("You are anxoius and shaken, what is your next step")
+    print("1. You descide that best action is to stay inte the tent, waiting for help")
+    print("2. You find courage and try luck walking straight into the fores")
+    option = ""
+    while option != "1" and option != "2":
+        option = input("Which option do you pick 1 or 2? ")
+
+    return option
+
 
 
 logo_img = (r"""\
@@ -10,10 +30,10 @@ logo_img = (r"""\
 █▀▀▄ ░▀░ █▀▀▀ █▀▀ █▀▀█ █▀▀█ ▀▀█▀▀ 　 █▀▀█ █▀▀█ █▀▀▀ █▀▀ 
 █▀▀▄ ▀█▀ █░▀█ █▀▀ █░░█ █░░█ ░░█░░ 　 █▄▄▀ █▄▄█ █░▀█ █▀▀ 
 ▀▀▀░ ▀▀▀ ▀▀▀▀ ▀░░ ▀▀▀▀ ▀▀▀▀ ░░▀░░ 　 ▀░▀▀ ▀░░▀ ▀▀▀▀ ▀▀▀
-    """)
+""")
 
 
-pistol_img = print(r"""\
+pistol_img = (r"""\
 ░▐█▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄█▄☆
 ░███████████████████████
 ░▓▓▓▓▓▓▓▓▓▓▓▓██▓▓▓▓▓▓▓▓◤
@@ -26,7 +46,7 @@ pistol_img = print(r"""\
     """)
 
 
-cabin_img = print(r"""\
+cabin_img = (r"""\
 ══════════════════════██════█████
 ═════════════════════█▒▒█═══█▒▒▒█
 ════════════════════█▒▒▒▒█══█▒▒▒█
@@ -66,7 +86,7 @@ cabin_img = print(r"""\
     """)
 
 
-wolf_img = print(r"""\
+wolf_img = (r"""\
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒
@@ -101,7 +121,7 @@ wolf_img = print(r"""\
     """)
 
 
-dead_tree_img = print(r"""\
+dead_tree_img = (r"""\
 ░░░░░░░░▌░░░░░░░▐
 ░░░░█░░▄▌░░░░▌░░░█░░░▄▄
 ░░░░▐▄░▌░░░░▐▄▌░░░▀▄█▄
@@ -125,7 +145,7 @@ dead_tree_img = print(r"""\
 
     """)
 
-bigfoot_img = print(r"""\
+bigfoot_img = (r"""\
 ════════════════════███████
 ═══════════════════█████████
 ══════════════════███████████
@@ -166,7 +186,7 @@ bigfoot_img = print(r"""\
 """)
 
 
-dead_img = print(r"""\
+dead_img = (r"""\
 ▒▒▒▒▒▒▒▒▒▒▒▄▄▄▄░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 ▒▒▒▒▒▒▒▒▒▄██████▒▒▒▒▒▄▄▄█▄▒▒▒▒▒▒▒▒▒▒
 ▒▒▒▒▒▒▒▄██▀░░▀██▄▒▒▒▒████████▄▒▒▒▒▒▒
@@ -187,3 +207,7 @@ dead_img = print(r"""\
 ██████████████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
 █████████████████▀▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒
     """)
+
+
+displayIntro()
+startGameTileOne()
