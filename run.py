@@ -3,42 +3,71 @@ import random
 # The welcoming section, let's you choose your name
 
 
-def displayIntro():
+def display_intro():
     print(logo_img)
     print("Welcome to the text based adventure game that is Bigfoot Rage!")
     print("Can you make it out of the forrest alive?\n")
     print("What's you name fellow traveller?")
     user_name = input("")
-    print("Oh i see, your name is " + user_name)
+    print("Oh i see, your name is " + user_name + "\n")
 
     return user_name
 
 # Start of the game, Tile 1
 
 
-def startGameTileOne():
+def start_game_tile_one():
     print("You suddenly wake up, all confused and don't know where you are,")
     print("when you poke your head out of the tent all you see is dense thick forest surrounding you,")
     print("the tent only contains a blanket and all your possesions are gone, wind is blowing and its really cold out there.")
-    print("You are anxoius and shaken, what is your next step")
+    print("You are anxoius and shaken, what is your next step\n")
     print("1. You descide that best action is to stay inte the tent, waiting for help")
     print("2. You find courage and try luck walking straight into the forest")
     option = ""
     while option != "1" and option != "2":
         option = input("Which option do you pick 1 or 2? ")
         if option == "1":
-            print("What are you thinking, you have freezed to death!")
+            print("What were you thinking, you have freezed to death!")
             print(dead_img)
             quit()
         elif option == "2":
-            crossroadTileTwo()
+            print("You decide to try your luck in the forest...")
+            crossroad_tile_two()
+        else:
+            option == ""
+            print("Please pick 1 or 2")
 
     return option
 
 
 # Crossroads Tile 2, Here the user will be greeted with 3 options
-def crossroadTileTwo():
+def crossroad_tile_two():
     print("Right infront of you is a crossroad, you peak to left and see a light shining through the trees,")
+    print("straight ahead theres only trees and to the right theres a cave. What option will go for?\n")
+    print("1. Go left and see what the lights are coming from")
+    print("2. I want to explore the cave to the right")
+    print("3. Continue on the straight path")
+    while option != "1" and option != "2" and option != "3":
+        option = input("Which option do you pick 1, 2 or 3? ")
+        if option == "1":
+            print("You chose to go towards the lights...")
+            cabin_tile_three()
+        elif option == "2":
+            print("You chose to head to the cave...")
+            wolf_den_tile_four()
+        elif option == "3":
+            print("You chose to continue walking straight...")
+        else:
+            option == ""
+            print("Please pick 1, 2 or 3")
+
+    return option
+
+
+
+
+
+
 
 logo_img = (r"""\
 
@@ -224,5 +253,5 @@ dead_img = (r"""\
     """)
 
 
-displayIntro()
-startGameTileOne()
+display_intro()
+start_game_tile_one()
