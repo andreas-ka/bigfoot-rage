@@ -1,6 +1,8 @@
 import random
 
-#The welcoming section, let's you choose your name
+# The welcoming section, let's you choose your name
+
+
 def displayIntro():
     print(logo_img)
     print("Welcome to the text based adventure game that is Bigfoot Rage!")
@@ -9,21 +11,34 @@ def displayIntro():
     user_name = input("")
     print("Oh i see, your name is " + user_name)
 
-#Start of the game, Tile 1
+    return user_name
+
+# Start of the game, Tile 1
+
+
 def startGameTileOne():
     print("You suddenly wake up, all confused and don't know where you are,")
-    print("when you poke your head out of the tent all you see is dense thick forrest surrounding you,")
+    print("when you poke your head out of the tent all you see is dense thick forest surrounding you,")
     print("the tent only contains a blanket and all your possesions are gone, wind is blowing and its really cold out there.")
     print("You are anxoius and shaken, what is your next step")
     print("1. You descide that best action is to stay inte the tent, waiting for help")
-    print("2. You find courage and try luck walking straight into the fores")
+    print("2. You find courage and try luck walking straight into the forest")
     option = ""
     while option != "1" and option != "2":
         option = input("Which option do you pick 1 or 2? ")
+        if option == "1":
+            print("What are you thinking, you have freezed to death!")
+            print(dead_img)
+            quit()
+        elif option == "2":
+            crossroadTileTwo()
 
     return option
 
 
+# Crossroads Tile 2, Here the user will be greeted with 3 options
+def crossroadTileTwo():
+    print("Right infront of you is a crossroad, you peak to left and see a light shining through the trees,")
 
 logo_img = (r"""\
 
