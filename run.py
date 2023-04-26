@@ -1,8 +1,33 @@
 import random
 
+def main():
+    username = display_intro()
+    display_intro()
+    start_game_tile_one()
+
+class Character:
+	def __init__(self, name, health, strength):
+		Character.name = username
+		Character.health = health
+		Character.strength = strength
+
+class Wolf:
+	def __init__(self, health, strength):
+		Wolf.health = health
+		Wolf.strength = strength
+
+class Bigfoot:
+	def __init__(self, health, strength):
+		Bigfoot.health = health
+		Bigfoot.strength = strength
+
+class Loot:
+	def __init__(self, strength, health):
+		Loot.strength = strength
+		Loot.health = health
+
+
 # The welcoming section, let's you choose your name
-
-
 def display_intro():
     print(logo_img)
     print("Welcome to the text based adventure game that is Bigfoot Rage!")
@@ -14,8 +39,6 @@ def display_intro():
     return user_name
 
 # Start of the game, Tile 1
-
-
 def start_game_tile_one():
     print("You suddenly wake up, all confused and don't know where you are,")
     print("when you poke your head out of the tent all you see is dense thick forest surrounding you,")
@@ -37,9 +60,7 @@ def start_game_tile_one():
             option == ""
             print("Please pick 1 or 2")
 
-    return option
-
-
+    
 # Crossroads Tile 2, Here the user will be greeted with 3 options
 def crossroad_tile_two():
     print("Right infront of you is a crossroad, you peak to left and see a light shining through the trees,")
@@ -61,7 +82,8 @@ def crossroad_tile_two():
             option == ""
             print("Please pick 1, 2 or 3")
 
-    return option
+    
+
 
 
 
@@ -253,5 +275,4 @@ dead_img = (r"""\
     """)
 
 
-display_intro()
-start_game_tile_one()
+main()
