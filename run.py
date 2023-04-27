@@ -17,6 +17,8 @@ def main():
     meadow_tile_five()
     treehouse_tile_six()
     bigfoot_tile_seven()
+    ocean_tile_eight()
+    escape_tile_nine()
 
 
 """Classes for character and enemies"""
@@ -218,7 +220,7 @@ def meadow_tile_five():
 def treehouse_tile_six():
     """User gets to the treehouse, if user wants climb up loot = pistol,
     stay the night = game over."""
-    termcolor.cprint(images.treehouse_img, 'grey')
+    termcolor.cprint(images.treehouse_img, 'green')
     treehouse_options = ["1","2","3"]
     user_choice = ""
     while user_choice not in treehouse_options:
@@ -298,7 +300,58 @@ def bigfoot_tile_seven():
     else:
         print("Please pick 1, 2, 3 or 4")
 
-#def ocean_tile_eight():
+
+def ocean_tile_eight():
+    """User gets to the ocean, the final tile of the game
+    use raft without compass = game over.
+    use raft and have the compass in loot list = Success, you escaped!"""
+    termcolor.cprint(images.beach_img, 'cyan')
+    ocean_options = ["1","2"]
+    user_choice = ""
+    while user_choice not in ocean_options:
+        print("Theres a lovely breeze when you finally arrive at the ocean,")
+        print("a long beautiful beach with white sand. and if you look ")
+        print("far enough you spot a raft in the distance, could that be your salvation?")
+        print("What will you do? \n")
+        print("1. Yay i will try my luck with the raft!")
+        print("2. Nah that dosent look safe, i head back\n")
+        user_choice = str(input("Which option do you pick 1 or 2 \n"))
+        if user_choice == ocean_options[0]:
+            i = "compass"
+            for i in loot:
+                termcolor.cprint("Like Columbus you sail away and with the compass you find your way home \n", 'green')
+                time.sleep(3)
+                escape_tile_nine()
+            else:
+                print("Hmm you dont seem to have a compass....\n")
+                time.sleep(2)
+                print("What were you thinking? you drifted for 3 days then died of starvation!")
+                termcolor.cprint("Game over dude, better luck next time...", 'red')
+                termcolor.cprint(images.dead_img, 'red')
+                quit()
+        elif user_choice == ocean_options[1]:
+            termcolor.cprint("I head back and explore some more...", 'yellow')
+            time.sleep(3)
+            meadow_tile_five()
+
+
+def escape_tile_nine():
+    termcolor.cprint(images.escaped_img, 'green')
+    print("Well done on completing the game!")
+    print("You are truly a survivor!")
+    print("Want to play again? y/n \n")
+    user_input = str(input(""))
+    if user_input == "y":
+        time.sleep(2)
+        display_intro()
+    elif user_input == "n":
+        print("Thank you for playing the game!")
+        time.sleep(4)
+        quit()
+
+
+
+ocean_tile_eight()
 #treehouse_tile_six()
 #bigfoot_tile_seven()
-main()
+#main()
