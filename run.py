@@ -1,6 +1,7 @@
 import random
 import termcolor
 import images
+import time
 
 run_wolf = [1, 2, 3]
 
@@ -81,6 +82,7 @@ def start_game_tile_one():
 
 def crossroad_tile_two():
     """Crossroads Tile 2, Here the user will be greeted with 3 options."""
+    termcolor.cprint(images.dead_tree_img, 'green')
     print("Right infront of you is a crossroad, you peak to left and see a light shining through the trees,")
     print("straight ahead theres only trees and to the right theres a cave. What option will go for?\n")
     print("1. Go left and see what the lights are coming from")
@@ -111,6 +113,7 @@ def cabin_tile_three():
     if option == "1":
         print("You search the cabin even though you shiver in fear, and in the back you find...")
         termcolor.cprint("Holy moly a knife, that could be useful", 'yellow')
+        time.sleep(5)
         crossroad_tile_two()
     elif option == "2":
         print("You turn around and head back to the crossroad")
@@ -138,17 +141,21 @@ def wolf_den_tile_four():
         if run_chance == 1:
             print("You got away safely, well done!!\n")
             print("back to crossroad...")
+            time.sleep(4)
             crossroad_tile_two()
         elif run_chance == 2:
             print("Ouch! You are severly injured but managed to escape back to crossroad...\n")
+            time.sleep(4)
             crossroad_tile_two()
         else:
             run_chance == 3
             print("Not even Usain Bolt can outrun a wolf silly, you died!!")
             termcolor.cprint(images.dead_img, 'red')
+            time.sleep(4)
             quit()
     elif option == "3":
         print("You used you knife like Steven Seagal and with ease the wolf is now dead pheew...back to the crossroad...\n")
+        time.sleep(4)
         crossroad_tile_two()
     else:
         print("Please pick 1, 2 or 3")
