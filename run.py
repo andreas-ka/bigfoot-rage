@@ -48,7 +48,7 @@ class Loot:
 
 
 def display_intro():
-    """The welcoming section, let's you choose your name."""
+    """The welcoming section, let's you choose your name, have to be alphabetical"""
     termcolor.cprint(images.logo_img, 'red')
     print("Welcome to the text based adventure game that is Bigfoot Rage!")
     print("Can you make it out of the forrest alive?\n")
@@ -65,7 +65,9 @@ def display_intro():
             
             
 def start_game_tile_one():
-    """Start of the game, Tile 1, first part of the story."""
+    """Start of the game, Tile 1, first part of the story.
+    User will be prompted to make a choice between 2 options
+    depending on choice a different outcome"""
     start_game_options = ["1","2"]
     user_choice = ""
     while user_choice not in start_game_options:
@@ -89,7 +91,10 @@ def start_game_tile_one():
             
 
 def crossroad_tile_two():
-    """Crossroads Tile 2, Here the user will be greeted with 3 options."""
+    """Crossroads Tile 2, Here the user will be greeted with 3 options.
+    A while loop checks to see if users choice is in the crossroad_options list
+    if input that function will take place.
+    User must do an input to move along"""
     crossroad_options = ["1","2","3"]
     user_choice = ""
     while user_choice not in crossroad_options:
@@ -115,7 +120,8 @@ def crossroad_tile_two():
         
 
 def cabin_tile_three():
-    """First tile in the game where the user is able to loot an item."""
+    """First tile in the game where the user is able to loot an item.
+    If user selects option 1 the user finds a knife, append the knife to loot list"""
     cabin_options = ["1","2"]
     user_choice = ""
     while user_choice not in cabin_options:
@@ -218,15 +224,15 @@ def meadow_tile_five():
 
 
 def treehouse_tile_six():
-    """User gets to the treehouse, if user wants climb up loot = pistol,
+    """User gets to the treehouse, if user wants climb up loot list append pistol,
     stay the night = game over."""
     termcolor.cprint(images.treehouse_img, 'green')
     treehouse_options = ["1","2","3"]
     user_choice = ""
     while user_choice not in treehouse_options:
-        print("Far up in the trees you see a treehouse, must be atleast 20 years old accordning to the state of it.")
+        print("Far up in the trees you see a treehouse, must be atleast 40 years old accordning to the state of it.")
         print("What will you do? \n")
-        print("1. I want to see whats up there, lets climb")
+        print("1. I want to see whats up there, lets get up there!")
         print("2. Nah that dosent look safe, i head back")
         print("3. Oh the perfect spot to the spend the night")
         user_choice = str(input("Which option do you pick 1, 2 or 3? \n"))
@@ -253,6 +259,8 @@ def treehouse_tile_six():
 
 def bigfoot_tile_seven():
     """The big fight with the big guy. Here user only survives if they have aquired the pistol,
+    when choosing option 4 it will check if pistol is in loot list,
+    if you dont have the pistol you will need to make a new choice.
     all other options = game over."""
     termcolor.cprint(images.bigfoot_img, 'red')
     bigfoot_options = ["1","2","3","4"]
