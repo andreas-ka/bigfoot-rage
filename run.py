@@ -5,7 +5,7 @@ import time
 
 run_wolf = [1, 2, 3]
 
-loot = []
+loot = ["compass"]
 
 def main():
     display_intro()
@@ -52,7 +52,7 @@ def display_intro():
     termcolor.cprint(images.logo_img, 'red')
     print("Welcome to the text based adventure game that is Bigfoot Rage!")
     print("Can you make it out of the forrest alive?\n")
-    print("What's you name fellow traveller?")
+    print("What's you name fellow traveller?\n")
     username = ""
     while True:
         username = input("")
@@ -202,7 +202,7 @@ def meadow_tile_five():
         print("Whats your plan of action? \n")
         print("1. That treehouse looks cool, lets check it out ")
         print("2. Could use some ocean air right now, lets go there")
-        print("3. What a strang structure, i need to check it out!\n")
+        print("3. What a strange structure, i need to check it out!\n")
         user_choice = str(input("Which option do you pick 1, 2 or 3? \n"))
         if user_choice == meadow_options[0]:
             print("You choose the path to the treehouse")
@@ -234,7 +234,7 @@ def treehouse_tile_six():
             print("You climbed the treehouse and behold you found a:")
             time.sleep(2)
             termcolor.cprint(images.pistol_img, 'yellow')
-            termcolor.cprint("PISTOL!!! That will be handy further on, back to meadow...", 'yellow')
+            termcolor.cprint("PISTOL!!! That will be handy further on, back to the meadow...", 'yellow')
             loot.append("pistol")
             time.sleep(3)
             meadow_tile_five()
@@ -303,7 +303,7 @@ def bigfoot_tile_seven():
 
 def ocean_tile_eight():
     """User gets to the ocean, the final tile of the game
-    use raft without compass = game over.
+    use raft without compass in loot list = game over.
     use raft and have the compass in loot list = Success, you escaped!"""
     termcolor.cprint(images.beach_img, 'cyan')
     ocean_options = ["1","2"]
@@ -319,7 +319,7 @@ def ocean_tile_eight():
         if user_choice == ocean_options[0]:
             i = "compass"
             for i in loot:
-                termcolor.cprint("Like Columbus you sail away and with the compass you find your way home \n", 'green')
+                termcolor.cprint("Like Columbus you set sail and with the compass at hand you find your way home \n", 'green')
                 time.sleep(3)
                 escape_tile_nine()
             else:
@@ -336,9 +336,11 @@ def ocean_tile_eight():
 
 
 def escape_tile_nine():
+    """ This only shows if user finish the game
+    User will asked if they want to play again """
     termcolor.cprint(images.escaped_img, 'green')
     print("Well done on completing the game!")
-    print("You are truly a survivor!")
+    print("You are truly a survivor!\n")
     print("Want to play again? y/n \n")
     user_input = str(input(""))
     if user_input == "y":
@@ -348,10 +350,8 @@ def escape_tile_nine():
         print("Thank you for playing the game!")
         time.sleep(4)
         quit()
+    else:
+        print("You can only type y for yes or n for no!")
 
 
-
-ocean_tile_eight()
-#treehouse_tile_six()
-#bigfoot_tile_seven()
-#main()
+main()
