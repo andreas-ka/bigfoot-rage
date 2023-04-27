@@ -2,6 +2,7 @@ import random
 import termcolor
 import images
 
+run_wolf = [1, 2, 3]
 
 def main():
     display_intro()
@@ -68,7 +69,7 @@ def start_game_tile_one():
         print("\n")
         if option == "1":
             print("What were you thinking, you have freezed to death!")
-            print(images.dead_img)
+            termcolor.cprint(images.dead_img, 'red')
             quit()
         elif option == "2":
             print("You decide to try your luck in the forest...")
@@ -101,9 +102,56 @@ def crossroad_tile_two():
 
 def cabin_tile_three():
     """First tile in the game where the user is able to loot an item."""
-    print(images.cabin_img)
+    termcolor.cprint(images.cabin_img, 'yellow')
     print("When you arrive at the source of the lights there is a clearing and in the middle is a creepy looking cabin,")
     print("you dont see any movement inside and its all quiet, what will you do?\n")
+    print("1. Search the cabin and hope for the best...")
+    print("2. Way to scary, i better head back...\n")
+    option = input("Which option do you pick 1 or 2 ")
+    if option == "1":
+        print("You search the cabin even though you shiver in fear, and in the back you find...")
+        termcolor.cprint("Holy moly a knife, that could be useful", 'yellow')
+        crossroad_tile_two()
+    elif option == "2":
+        print("You turn around and head back to the crossroad")
+        crossroad_tile_two()
+    else:
+        print("Please pick 1 or 2")
+
+
+def wolf_den_tile_four():
+    """User encounters the wolf, have to make the call if user wants to fight or run!"""
+    termcolor.cprint(images.wolf_img, 'grey')
+    print("In the darkness of the cave you suddenly hears a big roar!! A big wolf appears and wants you for its dinner!")
+    print("Now is the time to be brave and smart, what will you do?\n")
+    print("1. I tackle the wolf head on with my fists!")
+    print("2. I didnt have my cereals this morning i take my chances and make a RUN for it!!!")
+    print("3. Wait a minute, i have a knife, AAATTTAAACCKK!!\n")
+    option = input("Which option do you pick 1, 2 or 3? ")
+    if option == "1":
+        print("Not even Chuck Norris can kill a wolf with his fists, you died!!!")
+        termcolor.cprint(images.dead_img, 'red')
+        quit()
+    elif option == "2":
+        print("Like Usain Bolt you run for you life, did you make it?")
+        run_chance = random.choice(run_wolf)
+        if run_chance == 1:
+            print("You got away safely, well done!!\n")
+            print("back to crossroad...")
+            crossroad_tile_two()
+        elif run_chance == 2:
+            print("Ouch! You are severly injured but managed to escape back to crossroad...\n")
+            crossroad_tile_two()
+        else:
+            run_chance == 3
+            print("Not even Usain Bolt can outrun a wolf silly, you died!!")
+            termcolor.cprint(images.dead_img, 'red')
+            quit()
+    elif option == "3":
+        print("You used you knife like Steven Seagal and with ease the wolf is now dead pheew...back to the crossroad...\n")
+        crossroad_tile_two()
+    else:
+        print("Please pick 1, 2 or 3")
 
 
 main()
