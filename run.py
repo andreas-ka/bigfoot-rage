@@ -5,6 +5,8 @@ import time
 
 run_wolf = [1, 2, 3]
 
+loot = []
+
 def main():
     display_intro()
     #user_name = display_intro()
@@ -113,6 +115,7 @@ def cabin_tile_three():
     if option == "1":
         print("You search the cabin even though you shiver in fear, and in the back you find...")
         termcolor.cprint("Holy moly a knife, that could be useful", 'yellow')
+        loot.append("knife")
         time.sleep(5)
         crossroad_tile_two()
     elif option == "2":
@@ -123,7 +126,9 @@ def cabin_tile_three():
 
 
 def wolf_den_tile_four():
-    """User encounters the wolf, have to make the call if user wants to fight or run!"""
+    """User encounters the wolf, have to make the call if user wants to fight or run!
+    If user tries to use his fists it's game over, use the knife and you kill the wolf.
+    If the user selects the run option there is a 66% chance of making it"""
     termcolor.cprint(images.wolf_img, 'grey')
     print("In the darkness of the cave you suddenly hears a big roar!! A big wolf appears and wants you for its dinner!")
     print("Now is the time to be brave and smart, what will you do?\n")
@@ -154,11 +159,17 @@ def wolf_den_tile_four():
             time.sleep(4)
             quit()
     elif option == "3":
-        print("You used you knife like Steven Seagal and with ease the wolf is now dead pheew...back to the crossroad...\n")
-        time.sleep(4)
-        crossroad_tile_two()
+        i = "knife"
+        for i in loot:
+            print("You used you knife like Steven Seagal and with ease the wolf is now dead pheew...back to the crossroad...\n")
+            time.sleep(3)
+            crossroad_tile_two()
+        else: 
+            print("Hmm you dont seem to have a knife....")
+            break
     else:
         print("Please pick 1, 2 or 3")
+        
 
-
-main()
+wolf_den_tile_four()
+#main()
