@@ -3,13 +3,30 @@ import termcolor
 import images
 import time
 
+
+""" List used in the game """
 run_wolf = [1, 2, 3]
 
-loot = ["compass"]
+loot = []
+
+game_over_message = [
+    "GAME OVER! You aint no survivor man from discover channel!",
+    "GAME OVER!, You swimming with the fishes now pal",
+    "GAME OVER!, Your six feet under now dude",
+    "GAME OVER!, You wished now you joined the boyscouts right? you dead",
+    "GAME OVER!, Thats the end of the road for you, better luck next time!",
+    "GAME OVER!, Dear diary, today I died.",
+    "GAME OVER!, Mistakes were made...",
+    "GAME OVER!, I will have to call you back cause im dead!",
+    "GAME OVER!, I'm the grim reaper and you're my next customer",
+    "GAME OVER!, You have died of dysentery",
+    "GAME OVER!, it's time to kick ass and chew bubble gum, oh wait im dead!",
+    "GAME OVER!, Abort mission, im goin for a nap for a very long time!"
+]
+
 
 def main():
     display_intro()
-    #user_name = display_intro()
     start_game_tile_one()
     crossroad_tile_two()
     cabin_tile_three()
@@ -19,6 +36,7 @@ def main():
     bigfoot_tile_seven()
     ocean_tile_eight()
     escape_tile_nine()
+    game_over()
 
 
 """Classes for character and enemies"""
@@ -80,9 +98,9 @@ def start_game_tile_one():
         user_choice = str(input("Which option do you pick 1 or 2? \n"))
 
         if user_choice == start_game_options[0]:
-            print("What were you thinking, you have freezed to death!")
+            ptermcolor.cprint(random.choice(game_over_message),'red')
             termcolor.cprint(images.dead_img, 'red')
-            quit()
+            game_over()
         elif user_choice == start_game_options[1]:
             print("You decide to try your luck in the forest...")
             crossroad_tile_two()
@@ -159,9 +177,9 @@ def wolf_den_tile_four():
         print("3. Wait a minute, i have a knife, AAATTTAAACCKK!!\n")
         user_choice = input("Which option do you pick 1, 2 or 3? ")
         if user_choice == wolf_options[0]:
-            termcolor.cprint("Not even Chuck Norris can kill a wolf with his fists, you died!!!", 'red')
+            termcolor.cprint(random.choice(game_over_message),'red')
             termcolor.cprint(images.dead_img, 'red')
-            quit()
+            game_over()
         elif user_choice == wolf_options[1]:
             print("Like Usain Bolt you run for you life, did you make it?")
             run_chance = random.choice(run_wolf)
@@ -177,10 +195,10 @@ def wolf_den_tile_four():
                 crossroad_tile_two()
             else:
                 run_chance == 3
-                termcolor.cprint("Not even Usain Bolt can outrun a wolf silly, you died!!", 'red')
+                termcolor.cprint(random.choice(game_over_message),'red')
                 termcolor.cprint(images.dead_img, 'red')
                 time.sleep(4)
-                quit()
+                game_over()
         elif user_choice == wolf_options[2]:
             i = "knife"
             for i in loot:
@@ -250,12 +268,13 @@ def treehouse_tile_six():
         elif user_choice == treehouse_options[2]:
             print("This will be kinda cozy!")
             time.sleep(1)
-            termcolor.cprint("You freezed to death, not so cozy anymore hah!", 'red')
+            termcolor.cprint(random.choice(game_over_message),'red')
             termcolor.cprint(images.dead_img, 'red')
             time.sleep(3)
-            quit()
+            game_over()
     else:
         print("Please pick 1, 2 or 3")
+
 
 def bigfoot_tile_seven():
     """The big fight with the big guy. Here user only survives if they have aquired the pistol,
@@ -275,26 +294,23 @@ def bigfoot_tile_seven():
         print("4. HAH time to taste lead big guy. I shoot my pistol!! ")
         user_choice = str(input("Which option do you pick 1, 2, 3 or 4? \n"))
         if user_choice == bigfoot_options[0]:
-            termcolor.cprint("What were you thinking?", 'yellow')
             time.sleep(1)
-            termcolor.cprint("Must be hallucinating, cant kill a bigfoot with your fists! You dead mr! Game over!", 'red')
+            termcolor.cprint(random.choice(game_over_message),'red')
             termcolor.cprint(images.dead_img, 'red')
             time.sleep(3)
-            quit()
+            game_over()
         elif user_choice == bigfoot_options[1]:
             time.sleep(1)
-            termcolor.cprint("Outrun a bigfoot? worst idea ever, mus be jokin", 'yellow')
-            termcolor.cprint("Youre sleeping with the fishes now pal", 'red')
+            termcolor.cprint(random.choice(game_over_message),'red')
             termcolor.cprint(images.dead_img, 'red')
             time.sleep(3)
-            quit()
+            game_over()
         elif user_choice == bigfoot_options[2]:
             termcolor.cprint("You are gonna taste my fury big guy, ive got a knife!!", 'yellow')
             time.sleep(1)
-            termcolor.cprint("Bigfoot took your knife and used it as a toothpick while you being cooked over the flame", 'red')
-            termcolor.cprint("Game over dude, better luck next time...", 'red')
+            termcolor.cprint(random.choice(game_over_message),'red')
             termcolor.cprint(images.dead_img, 'red')
-            quit()
+            game_over()
         elif user_choice == bigfoot_options[3]:
             print("You fire your pistol at the bigfoot...")
             time.sleep(2)
@@ -327,16 +343,15 @@ def ocean_tile_eight():
         if user_choice == ocean_options[0]:
             i = "compass"
             for i in loot:
-                termcolor.cprint("Like Columbus you set sail and with the compass at hand you find your way home \n", 'green')
+                termcolor.cprint("Like Columbus you set sail, and with the compass at hand you find your way home \n", 'green')
                 time.sleep(3)
                 escape_tile_nine()
             else:
                 print("Hmm you dont seem to have a compass....\n")
                 time.sleep(2)
-                print("What were you thinking? you drifted for 3 days then died of starvation!")
-                termcolor.cprint("Game over dude, better luck next time...", 'red')
+                termcolor.cprint(random.choice(game_over_message),'red')
                 termcolor.cprint(images.dead_img, 'red')
-                quit()
+                game_over()
         elif user_choice == ocean_options[1]:
             termcolor.cprint("I head back and explore some more...", 'yellow')
             time.sleep(3)
@@ -345,10 +360,25 @@ def ocean_tile_eight():
 
 def escape_tile_nine():
     """ This only shows if user finish the game
-    User will asked if they want to play again """
+    user will asked if they want to play again """
     termcolor.cprint(images.escaped_img, 'green')
     print("Well done on completing the game!")
     print("You are truly a survivor!\n")
+    print("Want to play again? y/n \n")
+    user_input = str(input(""))
+    if user_input == "y":
+        time.sleep(2)
+        display_intro()
+    elif user_input == "n":
+        print("Thank you for playing the game!")
+        time.sleep(4)
+        quit()
+    else:
+        print("You can only type y for yes or n for no!")
+
+
+def game_over():
+    """ Runs whenever the user dies, lets you choose if you want to play again """
     print("Want to play again? y/n \n")
     user_input = str(input(""))
     if user_input == "y":
