@@ -2,6 +2,7 @@ import random
 import termcolor
 import images
 import time
+import sys
 
 
 """ List used in the game """
@@ -68,8 +69,13 @@ class Loot:
 def display_intro():
     """The welcoming section, let's you choose your name, have to be alphabetical"""
     termcolor.cprint(images.logo_img, 'red')
+    termcolor.cprint("----------- Made By: Andreas Karlsson 2023 ------------\n", 'yellow')
     print("Welcome to the text based adventure game that is Bigfoot Rage!")
-    print("Can you make it out of the forrest alive?\n")
+    print("Can you make it out of the forest alive?\n")
+    termcolor.cprint("Game information:\n", 'yellow')
+    print("1. Navigate the forest using printed options")
+    print("2. Find loot to help you progress trough out the game")
+    print("3. Last but not least SURVIVE!\n")
     print("What's you name fellow traveller?\n")
     username = ""
     while True:
@@ -78,7 +84,10 @@ def display_intro():
             print("Sorry username have to be alphabetical")
             continue
         else:
-            termcolor.cprint("Welcome to the spooky forest " + username + "\n", 'red')
+            sys.stdout.write("\033[F")
+            termcolor.cprint("Welcome to the spooky forest ", 'red', end='')
+            termcolor.cprint(username, 'yellow', attrs=["bold"])
+            print("\n")
             start_game_tile_one()
             
             
@@ -98,7 +107,7 @@ def start_game_tile_one():
         user_choice = str(input("Which option do you pick 1 or 2? \n"))
 
         if user_choice == start_game_options[0]:
-            ptermcolor.cprint(random.choice(game_over_message),'red')
+            termcolor.cprint(random.choice(game_over_message),'red')
             termcolor.cprint(images.dead_img, 'red')
             game_over()
         elif user_choice == start_game_options[1]:
@@ -252,7 +261,7 @@ def treehouse_tile_six():
         print("What will you do? \n")
         print("1. I want to see whats up there, lets get up there!")
         print("2. Nah that dosent look safe, i head back")
-        print("3. Oh the perfect spot to the spend the night")
+        print("3. Oh the perfect spot to the spend the night\n")
         user_choice = str(input("Which option do you pick 1, 2 or 3? \n"))
         if user_choice == treehouse_options[0]:
             print("You climbed the treehouse and behold you found a:")
@@ -266,7 +275,6 @@ def treehouse_tile_six():
             print("You head back to the meadow...")
             meadow_tile_five()
         elif user_choice == treehouse_options[2]:
-            print("This will be kinda cozy!")
             time.sleep(1)
             termcolor.cprint(random.choice(game_over_message),'red')
             termcolor.cprint(images.dead_img, 'red')
