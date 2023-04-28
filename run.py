@@ -344,15 +344,21 @@ def bigfoot_tile_seven():
             termcolor.cprint(images.dead_img, 'red')
             game_over()
         elif user_choice == bigfoot_options[3]:
-            print("You fire your pistol at the bigfoot...")
-            time.sleep(2)
-            termcolor.cprint("The big guy makes a last loud growl while falling down to the ground, you did it!!!", 'green')
-            termcolor.cprint("Wait, he dropped something, i need to investigate...", 'green')
-            time.sleep(1)
-            termcolor.cprint("Its a compass, should be useful! Now back to the meadow...", 'yellow')
-            loot_weapons.append("compass")
-            time.sleep(4)
-            meadow_tile_five()
+            i = "pistol"
+            for i in loot_weapons:
+                print("You fire your pistol at the bigfoot...")
+                time.sleep(2)
+                termcolor.cprint("The big guy makes a last loud growl while falling down to the ground, you did it!!!", 'green')
+                termcolor.cprint("Wait, he dropped something, i need to investigate...", 'green')
+                time.sleep(1)
+                termcolor.cprint("Its a compass, should be useful! Now back to the meadow...", 'yellow')
+                loot_weapons.append("compass")
+                time.sleep(4)
+                meadow_tile_five()
+            else:
+                print("Hmm you dont seem to have a pistol....\n")
+                time.sleep(2)
+                bigfoot_tile_seven()
     else:
         print("Please pick 1, 2, 3 or 4")
 
