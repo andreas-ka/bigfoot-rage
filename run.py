@@ -120,13 +120,20 @@ def start_game_tile_one():
         elif user_choice == start_game_options[2]:
             termcolor.cprint("Not much to find, until you notice a small piece of paper that seems", 'yellow')
             termcolor.cprint("to be part of a bigger map, let's hope you find the rest", 'yellow')
-            termcolor.cprint("time to move on...guess i head into the forest", 'yellow')
             loot_map.append(1)
-            print(loot)
             time.sleep(5)
-            crossroad_tile_two()
+            values = [1,2,3]
+            if values == loot_map:
+                termcolor.cprint("Let's combine them and see what it tells...", 'yellow')
+                time.sleep(2)
+                termcolor.cprint("While in meadow maybe try option 4", 'yellow')
+                time.sleep(5)
+            else:
+                termcolor.cprint("Let's countinue our exploration and head into the forest", 'yellow')
+                time.sleep(3)
+                crossroad_tile_two()
         else:
-            print("Please pick 1 or 2")
+            print("Please pick 1, 2 or 3")
             
 
 def crossroad_tile_two():
@@ -228,10 +235,19 @@ def wolf_den_tile_four():
             for i in loot_weapons:
                 termcolor.cprint("You used you knife like Steven Seagal and with ease", 'green')
                 termcolor.cprint("the wolf is now dead pheew...", 'green')
-                termcolor.cprint("On the the cave wall you find a piece of a map, hmm maybe i can find more", 'yellow')
+                termcolor.cprint("On the the cave wall you find a piece of a map!", 'yellow')
                 loot_map.append(2)
                 time.sleep(5)
-                crossroad_tile_two()
+                values = [1,2,3]
+                if values == loot_map:
+                    termcolor.cprint("Let's combine them and see what it tells...", 'yellow')
+                    time.sleep(2)
+                    termcolor.cprint("While in meadow maybe try option 4", 'yellow')
+                    time.sleep(5)
+                else:
+                    termcolor.cprint("Let's countinue our exploration.", 'yellow')
+                    time.sleep(3)
+                    crossroad_tile_two()
             else:
                 print("Hmm you dont seem to have a knife....\n")
                 time.sleep(2)
@@ -379,6 +395,7 @@ def ocean_tile_eight():
         print("1. Yay i will try my luck with the raft!")
         print("2. Nah that dosent look safe, i head back")
         print("2. Looks something is buried over there, maybe have a look...\n")
+        print(loot_map)
         user_choice = str(input("Which option do you pick 1, 2 or 3 \n"))
         if user_choice == ocean_options[0]:
             i = "compass"
@@ -403,6 +420,7 @@ def ocean_tile_eight():
             time.sleep(2)
             loot_map.append(3)
             values = [1,2,3]
+            print(loot_map)
             if values == loot_map:
                 termcolor.cprint("Let's combine them and see what it tells...", 'yellow')
                 time.sleep(2)
@@ -436,6 +454,7 @@ def escape_tile_nine():
 
 
 def surprise_tile_ten():
+    """ This tile is only available if user collects all three pieces of the map """
     termcolor.cprint(images.surprise_img, 'blue')
     termcolor.cprint("Well done! Just a little easter egg...", 'yellow')
     termcolor.cprint("Cant hang around here, you still need to escape...", 'yellow')
