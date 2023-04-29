@@ -9,7 +9,7 @@ import sys
 run_wolf = [1, 2, 3]
 
 loot_weapons = []
-loot_map = [1,2]
+loot_map = []
 
 game_over_message = [
     "GAME OVER! You aint no survivor man from discover channel!",
@@ -42,34 +42,10 @@ def main():
     surprise_tile_ten()
 
 
-"""Classes for character and enemies"""
-class Character:
-    def __init__(self, name, health, strength):
-        Character.name = user_name
-        Character.health = health
-        Character.strength = strength
-
-
-class Wolf:
-    def __init__(self, health, strength):
-        Wolf.health = health
-        Wolf.strength = strength
-
-
-class Bigfoot:
-    def __init__(self, health, strength):
-        Bigfoot.health = health
-        Bigfoot.strength = strength
-
-
-class Loot:
-    def __init__(self, strength, health):
-        Loot.strength = strength
-        Loot.health = health
-
-
 def display_intro():
-    """The welcoming section, let's you choose your name, have to be alphabetical"""
+    """The welcoming section, let's you choose your name, have to be alphabetical
+    using termcolor for a more alive feel.
+    Running a while loop with isalpha to check if input is alphabetical"""
     termcolor.cprint(images.logo_img, 'red')
     termcolor.cprint("----------- Made By: Andreas Karlsson 2023 ------------\n", 'yellow')
     print("Welcome to the text based adventure game that is Bigfoot Rage!")
@@ -96,7 +72,9 @@ def display_intro():
 def start_game_tile_one():
     """Start of the game, Tile 1, first part of the story.
     User will be prompted to make a choice between 2 options
-    depending on choice a different outcome"""
+    depending on choice a different outcome
+    checks the selected option to the list, if not in list it
+    ask you to pick again."""
     start_game_options = ["1","2","3"]
     user_choice = ""
     while user_choice not in start_game_options:
@@ -110,7 +88,6 @@ def start_game_tile_one():
         print("2. You find courage and try luck walking straight into the forest")
         print("3. Search the area around the tent \n")
         user_choice = str(input("Which option do you pick 1,2 or 3? \n"))
-
         if user_choice == start_game_options[0]:
             termcolor.cprint(random.choice(game_over_message),'red')
             termcolor.cprint(images.dead_img, 'red')
@@ -119,20 +96,26 @@ def start_game_tile_one():
             print("You decide to try your luck in the forest...")
             crossroad_tile_two()
         elif user_choice == start_game_options[2]:
-            termcolor.cprint("Not much to find, until you notice a small piece of paper that seems", 'yellow')
-            termcolor.cprint("to be part of a bigger map, let's hope you find the rest", 'yellow')
-            loot_map.append(1)
-            time.sleep(5)
-            values = [1,2,3]
-            if values == loot_map:
-                termcolor.cprint("Let's combine them and see what it tells...", 'yellow')
+            i = 1
+            if i in loot_map:
+                print("You have already collected the map piece")
                 time.sleep(2)
-                termcolor.cprint("While in meadow maybe try option 4", 'yellow')
+                start_game_tile_one()
+            else:    
+                termcolor.cprint("Not much to find, until you notice a small piece of paper that seems", 'yellow')
+                termcolor.cprint("to be part of a bigger map, let's hope you find the rest", 'yellow')
+                loot_map.append(1)
                 time.sleep(5)
-            else:
-                termcolor.cprint("Let's countinue our exploration and head into the forest", 'yellow')
-                time.sleep(3)
-                crossroad_tile_two()
+                value = len(loot_map)
+                if value == 3:
+                    termcolor.cprint("Let's combine them and see what it tells...", 'yellow')
+                    time.sleep(2)
+                    termcolor.cprint("While in meadow maybe try option 5", 'magenta')
+                    time.sleep(5)
+                else:
+                    termcolor.cprint("Let's countinue our exploration and head into the forest", 'yellow')
+                    time.sleep(3)
+                    crossroad_tile_two()
         else:
             print("Please pick 1, 2 or 3")
             
@@ -141,7 +124,8 @@ def crossroad_tile_two():
     """Crossroads Tile 2, Here the user will be greeted with 3 options.
     A while loop checks to see if users choice is in the crossroad_options list
     if input that function will take place.
-    User must do an input to move along"""
+    User must do an input to move along.
+    Also an if statement to check if user already has killed wolf, if so option blocked"""
     crossroad_options = ["1","2","3","4"]
     user_choice = ""
     while user_choice not in crossroad_options:
@@ -153,8 +137,8 @@ def crossroad_tile_two():
         print("2. I want to explore the cave to the right")
         print("3. Continue on the straight path")
         print("4. I dont like this at all, lets return to the tent\n")
-   
         user_choice = str(input("Which option do you pick 1, 2, 3 or 4? "))
+        print(loot_map)
         if user_choice == crossroad_options[0]:
             print("You chose to go towards the lights...")
             cabin_tile_three()
@@ -179,7 +163,8 @@ def crossroad_tile_two():
 
 def cabin_tile_three():
     """First tile in the game where the user is able to loot an item.
-    If user selects option 1 the user finds a knife, append the knife to loot list"""
+    If user selects option 1 the user finds a knife, append the knife to loot list
+    If user already have the knife you have to select a new option."""
     cabin_options = ["1","2"]
     user_choice = ""
     while user_choice not in cabin_options:
@@ -212,7 +197,10 @@ def cabin_tile_three():
 def wolf_den_tile_four():
     """User encounters the wolf, have to make the call if user wants to fight or run!
     If user tries to use his fists it's game over, use the knife and you kill the wolf.
-    If the user selects the run option there is a 66% chance of making it"""
+    If the user selects the run option there is a 66% chance of making it
+    Checks wether the user has the knife or not, if not choose new option.
+    If user kills wolf it gets a piece of the map, append loot_map.
+    And if user already has the other two maps user gets message about easter egg."""
     wolf_options = ["1","2","3"]
     user_choice = ""
     while user_choice not in wolf_options:
@@ -255,12 +243,12 @@ def wolf_den_tile_four():
                 time.sleep(2)
                 termcolor.cprint("On the the cave wall you find a piece of a map!", 'yellow')
                 loot_map.append(2)
-                time.sleep(5)
-                values = [1,2,3]
-                if values == loot_map:
+                time.sleep(3)
+                value = len(loot_map)
+                if value == 3:
                     termcolor.cprint("Let's combine them and see what it tells...", 'yellow')
                     time.sleep(2)
-                    termcolor.cprint("While in meadow maybe try option 4", 'yellow')
+                    termcolor.cprint("While in meadow maybe try option 5", 'magenta')
                     time.sleep(5)
                 else:
                     termcolor.cprint("Let's countinue our exploration.", 'yellow')
@@ -274,10 +262,11 @@ def wolf_den_tile_four():
             
         
 def meadow_tile_five():
-    """User reaches a meadow that also is a crossroad with 3 options
+    """User reaches a meadow that also is a crossroad with 3 options,
+    the 4th option is only known if user has collected all 3 map pieces.
     Displays an ascii art om a flower"""
     termcolor.cprint(images.flowers_img, 'magenta')
-    meadow_options = ["1","2","3","4"]
+    meadow_options = ["1","2","3","4","5"]
     user_choice = ""
     while user_choice not in meadow_options:
         termcolor.cprint("========================= MEADOW =========================", 'magenta')
@@ -295,19 +284,29 @@ def meadow_tile_five():
             print("You chose to head to the ocean...")
             ocean_tile_eight()
         elif user_choice == meadow_options[2]:
-            print("You chose to continue walking straight towards the structure...")
-            bigfoot_tile_seven()
+            i = 2
+            for i in loot_weapons:
+                print("You have already killed the bigfoot, choose another option...")
+                time.sleep(2)
+                meadow_tile_five()
+            else:
+                print("You chose to continue walking straight towards the structure...")
+                bigfoot_tile_seven()
         elif user_choice == meadow_options[3]:
+            print("I think i have forgotten something, lets go to crossroads again...")
+            time.sleep(2)
+            crossroad_tile_two()
+        elif user_choice == meadow_options[4]:
             termcolor.cprint("Wow what is this...")
             time.sleep(3)
             surprise_tile_ten()
     else:
-        print("Please pick 1, 2 or 3")
+        print("Please pick 1, 2, 3 or 4")
         
 
-
 def treehouse_tile_six():
-    """User gets to the treehouse, if user wants climb up loot list append pistol,
+    """User gets to the treehouse, if user wants climb up user loot list append pistol,
+    if they already have the pistol = choose other option.
     stay the night = game over."""
     termcolor.cprint(images.treehouse_img, 'green')
     treehouse_options = ["1","2","3"]
@@ -320,7 +319,6 @@ def treehouse_tile_six():
         print("2. Nah that dosent look safe, i head back")
         print("3. Oh the perfect spot to the spend the night\n")
         user_choice = str(input("Which option do you pick 1, 2 or 3? \n"))
-        print(loot_weapons)
         if user_choice == treehouse_options[0]:
             i = 2
             if i in loot_weapons:
@@ -366,7 +364,6 @@ def bigfoot_tile_seven():
         print("3. Wait i can use my knife! AAATTAACCKKK!")
         print("4. HAH time to taste lead big guy. I shoot my pistol!! ")
         user_choice = str(input("Which option do you pick 1, 2, 3 or 4? \n"))
-        print(loot_weapons)
         if user_choice == bigfoot_options[0]:
             time.sleep(1)
             termcolor.cprint(random.choice(game_over_message),'red')
@@ -408,7 +405,8 @@ def bigfoot_tile_seven():
 def ocean_tile_eight():
     """User gets to the ocean, the final tile of the game
     use raft without compass in loot list = game over.
-    use raft and have the compass in loot list = Success, you escaped!"""
+    use raft and have the compass in loot list = Success, you escaped!
+    Option 3 gets you a map piece, choose other option if already in loot_map."""
     termcolor.cprint(images.beach_img, 'cyan')
     ocean_options = ["1","2","3"]
     user_choice = ""
@@ -421,7 +419,6 @@ def ocean_tile_eight():
         print("1. Yay i will try my luck with the raft!")
         print("2. Nah that dosent look safe, i head back")
         print("3. Looks something is buried over there, maybe have a look...\n")
-        print(loot_map)
         user_choice = str(input("Which option do you pick 1, 2 or 3 \n"))
         if user_choice == ocean_options[0]:
             i = 3
@@ -440,8 +437,8 @@ def ocean_tile_eight():
             time.sleep(3)
             meadow_tile_five()
         elif user_choice == ocean_options[2]:
-            loot_values = [1,2,3]
-            if loot_values == loot_map:
+            i = 3
+            if 3 in loot_map:
                 print("Seems you have already searched there...")
                 time.sleep(2)
                 ocean_tile_eight()
@@ -451,11 +448,11 @@ def ocean_tile_eight():
                 termcolor.cprint("another peice of a map", 'yellow')
                 loot_map.append(3)
                 time.sleep(3)
-                values = [1,2,3]
-                if values == loot_map:
+                value = len(loot_map)
+                if value == 3:
                     termcolor.cprint("Let's combine them and see what it tells...", 'yellow')
                     time.sleep(2)
-                    termcolor.cprint("While in meadow maybe try option 4", 'yellow')
+                    termcolor.cprint("While in meadow maybe try option 5", 'magenta')
                     time.sleep(5)
                     meadow_tile_five()
         else:
@@ -465,8 +462,9 @@ def ocean_tile_eight():
 
 
 def escape_tile_nine():
-    """ This only shows if user finish the game
-    user will asked if they want to play again """
+    """ This only shows if user finish the game,
+    congratulates the user for completing the game!
+    User will asked if they want to play again """
     termcolor.cprint(images.escaped_img, 'green')
     termcolor.cprint("========================= CONGRATULATIONS =========================", 'green')
     print("Well done on completing the game!")
@@ -485,7 +483,8 @@ def escape_tile_nine():
 
 
 def surprise_tile_ten():
-    """ This tile is only available if user collects all three pieces of the map """
+    """ This tile is only available if user collects all three pieces of the map
+    Just a fun ascii image and well done"""
     termcolor.cprint(images.surprise_img, 'blue')
     termcolor.cprint("Well done! Just a little easter egg...", 'yellow')
     termcolor.cprint("Cant hang around here, you still need to escape...", 'yellow')
@@ -494,7 +493,9 @@ def surprise_tile_ten():
 
 
 def game_over():
-    """ Runs whenever the user dies, lets you choose if you want to play again """
+    """ Runs whenever the user dies, displays a random death quote
+    from game_over_message list, also a ascii art of death. 
+    Lets user choose if they want to play again """
     termcolor.cprint("======================== THANKS FOR PLAYING ========================", 'red')
     print("Want to play again? y/n \n")
     user_input = str(input(""))
