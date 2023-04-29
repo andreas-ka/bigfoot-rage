@@ -440,9 +440,8 @@ def ocean_tile_eight():
             time.sleep(3)
             meadow_tile_five()
         elif user_choice == ocean_options[2]:
-            print(loot_map)
-            i = 3
-            for i in loot_map:
+            loot_values = [1,2,3]
+            if loot_values == loot_map:
                 print("Seems you have already searched there...")
                 time.sleep(2)
                 ocean_tile_eight()
@@ -459,10 +458,10 @@ def ocean_tile_eight():
                     termcolor.cprint("While in meadow maybe try option 4", 'yellow')
                     time.sleep(5)
                     meadow_tile_five()
-                else:
-                    termcolor.cprint("Let's countinue our exploration and choose another option", 'yellow')
-                    time.sleep(3)
-                    ocean_tile_eight()
+        else:
+            termcolor.cprint("Let's countinue our exploration and choose another option", 'yellow')
+            time.sleep(3)
+            ocean_tile_eight()
 
 
 def escape_tile_nine():
@@ -509,5 +508,5 @@ def game_over():
     else:
         print("You can only type y for yes or n for no!")
 
-ocean_tile_eight()
-#main()
+
+main()
