@@ -9,7 +9,7 @@ import sys
 run_wolf = [1, 2, 3]
 
 loot_weapons = []
-loot_map = []
+loot_map = [1,2]
 
 game_over_message = [
     "GAME OVER! You aint no survivor man from discover channel!",
@@ -39,6 +39,7 @@ def main():
     ocean_tile_eight()
     escape_tile_nine()
     game_over()
+    surprise_tile_ten()
 
 
 """Classes for character and enemies"""
@@ -442,16 +443,16 @@ def ocean_tile_eight():
             print(loot_map)
             i = 3
             for i in loot_map:
-                print("You have already searched here...")
+                print("Seems you have already searched there...")
+                time.sleep(2)
                 ocean_tile_eight()
             else:
-                print("You start digging with you bare hands... ")
+                print("You start to dig with your bare hands, and find.....")
                 time.sleep(2)
-                termcolor.cprint("Wow it's a part of a map", 'yellow')
-                time.sleep(2)
+                termcolor.cprint("another peice of a map", 'yellow')
                 loot_map.append(3)
+                time.sleep(3)
                 values = [1,2,3]
-                print(loot_map)
                 if values == loot_map:
                     termcolor.cprint("Let's combine them and see what it tells...", 'yellow')
                     time.sleep(2)
