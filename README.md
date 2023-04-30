@@ -52,7 +52,7 @@ _____________________________________________________________________________
 
 #### Imagery
 I really wanted the game to be more then text so i used some ascii art from fsymbols,   
-makes the more alive and eye catching.
+makes the game more alive and eye catching.
 
 _____________________________________________________________________________  
  
