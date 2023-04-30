@@ -128,6 +128,8 @@ _____________________________________________________________________________
 
 - A video by Doug Mcnally how to make a text based game, used his idea to check for input validation. [video link](https://www.youtube.com/watch?v=miuHrP2O7Jw&ab_channel=DougMcNally)
 
+- Got help styling the website by looking at Alexa's project, go play it, alot of fun! [Harry Potter Adventure Game](https://github.com/AlexaH88/harry-potter-adventure-game)
+
 
 ### Content.  
 All content was written by the developer.
