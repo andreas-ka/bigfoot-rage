@@ -40,8 +40,11 @@ _____________________________________________________________________________
 _____________________________________________________________________________  
 
 #### Colour Scheme
-Imported termcolor to change the colors in the terminal.
-Used color are: red, yellow, gray, cyan, green.
+- Imported termcolor to change the colors in the terminal.
+Available colors in termcolor below:    
+![Screenshot](/assets/images/termcolor_palette.png)   
+- Colors from background, that is also used on button and footer    
+![Screenshot](/assets/images/color_palette_background.png) 
 
 _____________________________________________________________________________  
 
