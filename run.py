@@ -1,8 +1,9 @@
 import random
-import termcolor
-import images
 import time
 import sys
+import termcolor
+import images
+
 
 
 """ List used in the game """
@@ -26,7 +27,7 @@ game_over_message = [
     "GAME OVER!, Abort mission, I'm going for a nap for a very long time!"
 ]
 
-
+""" Starts the game and all the functions """
 def main():
     display_intro()
     start_game_tile_one()
@@ -69,8 +70,8 @@ def display_intro():
             termcolor.cprint(username, 'yellow', attrs=["bold"])
             print("\n")
             start_game_tile_one()
-            
-            
+
+         
 def start_game_tile_one():
     """Start of the game, Tile 1, the first part of the story.
     The user will be prompted to choose between 3 options
@@ -151,8 +152,8 @@ def crossroad_tile_two():
                 time.sleep(2)
                 crossroad_tile_two()
             else:
-             print("You chose to head to the cave...")
-             wolf_den_tile_four()
+                print("You chose to head to the cave...")
+                wolf_den_tile_four()
         elif user_choice == crossroad_options[2]:
             print("You chose to continue walking straight...")
             meadow_tile_five()
@@ -263,7 +264,7 @@ def wolf_den_tile_four():
                 wolf_den_tile_four()      
         else: print("Pretty please pick 1, 2 or 3")
             
-        
+
 def meadow_tile_five():
     """User reaches a meadow that also is a crossroad with 3 options,
     the 4th option is only known if the user has collected all 3 map pieces.
@@ -306,7 +307,7 @@ def meadow_tile_five():
             surprise_tile_ten()
     else:
         print("Please pick 1, 2, 3 or 4")
-        
+      
 
 def treehouse_tile_six():
     """User gets to the treehouse, if the user wants to climb up the user loot list append pistol,
