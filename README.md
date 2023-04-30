@@ -2,8 +2,9 @@
 
 ### A fun game about survival in the forest, finding loot and avoid being killed by monsters.   
 ### Will you make it out alive?       
-
-
+_____________________________________________________________________________
+### Am i responsive
+![Screenshot](/assets/images/amiresponsive.png)
 _____________________________________________________________________________
 ### Lucid chart
 ![Screenshot](/assets/images/bigfoot_rage_lucid.png)  
