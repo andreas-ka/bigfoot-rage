@@ -56,6 +56,8 @@ def display_intro():
     print("3. Last but not least SURVIVE!\n")
     print("What's you name fellow traveller?\n")
     username = ""
+    loot_map.clear()
+    loot_weapons.clear()
     while True:
         username = input("")
         if not username.isalpha():
@@ -71,8 +73,8 @@ def display_intro():
             
 def start_game_tile_one():
     """Start of the game, Tile 1, first part of the story.
-    User will be prompted to make a choice between 2 options
-    depending on choice a different outcome
+    User will be prompted to make a choice between 3 options
+    depending on choice a different outcome.
     checks the selected option to the list, if not in list it
     ask you to pick again."""
     start_game_options = ["1","2","3"]
@@ -278,7 +280,7 @@ def meadow_tile_five():
         print("2. Could use some ocean air right now, lets go there")
         print("3. What a strange structure, i need to check it out!")
         print("4. I think i have forgotten something, lets go to crossroads again...\n")
-        user_choice = str(input("Which option do you pick 1, 2 or 3? \n"))
+        user_choice = str(input("Which option do you pick 1, 2, 3 or 4? \n"))
         if user_choice == meadow_options[0]:
             print("You choose the path to the treehouse")
             treehouse_tile_six()
@@ -462,28 +464,32 @@ def ocean_tile_eight():
                     time.sleep(2)
                     ocean_tile_eight()
         else:
-            termcolor.cprint("Let's countinue our exploration and choose another option", 'yellow')
+            print("Please select 1,2 or 3")
             time.sleep(3)
-            ocean_tile_eight()
 
 
 def escape_tile_nine():
     """ This only shows if user finish the game,
     congratulates the user for completing the game!
     User will asked if they want to play again """
+    escape_options = ["y","n"]
     termcolor.cprint(images.escaped_img, 'green')
-    termcolor.cprint("========================= CONGRATULATIONS =========================", 'green')
-    print("Well done on completing the game!")
-    print("You are truly a survivor!\n")
-    print("Want to play again? y/n \n")
-    user_input = str(input(""))
-    if user_input == "y":
-        time.sleep(2)
-        display_intro()
-    elif user_input == "n":
-        print("Thank you for playing the game!")
-        time.sleep(4)
-        quit()
+    user_choice = ""
+    while user_choice not in escape_options:
+        termcolor.cprint("========================= CONGRATULATIONS =========================", 'green')
+        print("Well done on completing the game!")
+        print("You are truly a survivor!\n")
+        print("Want to play again? y/n \n")
+        user_input = str(input(""))
+        if user_input == "y":
+            time.sleep(2)
+            display_intro()
+            loot_map.clear()
+            loot_weapons.clear()
+        elif user_input == "n":
+            print("Thank you for playing the game!")
+            time.sleep(4)
+            quit()
     else:
         print("You can only type y for yes or n for no!")
 
@@ -508,6 +514,8 @@ def game_over():
     if user_input == "y":
         time.sleep(2)
         display_intro()
+        loot_map.clear()
+        loot_weapons.clear()
     elif user_input == "n":
         print("Thank you for playing the game!")
         time.sleep(4)
