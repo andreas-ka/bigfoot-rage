@@ -74,10 +74,9 @@ ____________________________________________________________________________
 - Google Sheet to make a bug testing sheet.
 
 ## Testing
-The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
 
-W3C Markup Validator - Results
-W3C CSS Validator - Results   
+- Pylinter used in gitpod and shows no problems with code.    
+[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)
 
 _____________________________________________________________________________  
 
