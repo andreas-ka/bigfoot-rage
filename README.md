@@ -86,16 +86,18 @@ Extensive testing done by myself, chart of that is available on this google [SHE
 - This includes input checks.   
 - Tile movement.   
 - Game walktrough with different loot order.
+- 
 _____________________________________________________________________________  
 
 ## Further Testing
-The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
-Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues. 
+- The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge and Safari browsers.
+- Friends and family members were asked to review the site and documentation to point out any bugs and/or user experience issues. 
+- All content in the game has been looked at with Grammarly to check for sentence builds and spellchecking.
 
 _____________________________________________________________________________  
 
 ## Fixed Bugs
-- Had problem with the outcome when you looted map and wepaons in a random order, fixed with changing how to check the lists, used len() and that works better.   
+- Had problem with the outcome when you looted map and weapons in a random order, fixed with changing how to check the lists, used len() and that works better.   
 
 - Other issue was that if you wanted to play again the loot lists didnt reset, had to implement a clear() list function.
   
