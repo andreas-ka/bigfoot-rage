@@ -29,7 +29,7 @@
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 200px;
+            height: 100px;
         }
 
         img {
@@ -38,12 +38,19 @@
         }
 
         body {
-            background: url(https://i.imgur.com/r25XFbN.jpeg);
+            background: url(https://i.imgur.com/r25XFbN.jpeg) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
         }
 
         a {
             margin: 4px;
         }
+
+        /* media queries */
+        @media (min-width: 300px) and (max-width: 500px)
     </style>
 </head>
 <body>
