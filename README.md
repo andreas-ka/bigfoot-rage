@@ -37,6 +37,8 @@ As a Frequent User, I want to sign up to the Newsletter so that I am emailed any
 _____________________________________________________________________________  
 
 ### Design   
+The whole design is based on 80s/90s video game vibe. The colorful terminal and the   
+bigfoot background image add a nice touch.
 
 _____________________________________________________________________________  
 
@@ -138,6 +140,7 @@ _____________________________________________________________________________
 
 ### Media.  
 - All ascii art came from [fsymbols](https://stackoverflow.com/questions/53173087/input-in-python-to-be-only-in-string)
+- Background image made in midjourney [Link](https://www.midjourney.com/app/)
 
 ### Acknowledgements
 - My Mentor for continuous helpful feedback.
