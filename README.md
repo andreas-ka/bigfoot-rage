@@ -1,6 +1,6 @@
 # Bigfoot Rage
 
-### A fun game about survival in the forest, finding loot and avoid being killed by monsters.   
+### A fun game about survival in the forest, finding loot and avoid being killed by... you guessed it bigfoot!.   
 ### Will you make it out alive?       
 _____________________________________________________________________________
 ### Am i responsive
@@ -134,14 +134,14 @@ _____________________________________________________________________________
 
 
 ### Content.  
-All content was written by the developer.
+- All content was written by the developer.
 
 ### Media.  
-All ascii art came from [fsymbols](https://stackoverflow.com/questions/53173087/input-in-python-to-be-only-in-string)
+- All ascii art came from [fsymbols](https://stackoverflow.com/questions/53173087/input-in-python-to-be-only-in-string)
 
 ### Acknowledgements
-My Mentor for continuous helpful feedback.
+- My Mentor for continuous helpful feedback.
 
-Tutor support at Code Institute for their support.
+- Tutor support at Code Institute for their support.
 
 _____________________________________________________________________________   
