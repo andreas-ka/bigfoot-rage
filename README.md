@@ -76,6 +76,7 @@ _____________________________________________________________________________
 #### Imagery
 I really wanted the game to be more then text so i used some ascii art from fsymbols,   
 makes the game more alive and eye catching. Used midjourney AI to make the background image.
+![Screenshot](/assets/images/bigfoot-wallpaper1.png)
 
 _____________________________________________________________________________  
  
@@ -97,7 +98,14 @@ ____________________________________________________________________________
 ## Testing
 
 - Pylinter used in gitpod and shows no problems with code.    
-[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)
+[![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)   
+
+## Lighthouse
+### Desktop
+![Screenshot](/assets/images/lighthouse_desktop.png)
+### Mobile
+![Screenshot](/assets/images/lighthouse_mobile.png)
+
 
 _____________________________________________________________________________  
 
