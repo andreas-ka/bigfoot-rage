@@ -1,44 +1,40 @@
 # Bigfoot Rage
 
 ### A fun game about survival in the forest, finding loot and avoid being killed by... you guessed it bigfoot!.   
-### Will you make it out alive?       
+### Will you make it out alive?    
+      
+
+### Link to the finished game: [PLAY](https://bigfoot-rage.herokuapp.com/)
 _____________________________________________________________________________
-### Am i responsive
+### Am i responsive image how the site looks on different devices
 ![Screenshot](/assets/images/amiresponsive.png)
 _____________________________________________________________________________
 ### Lucid chart
 ![Screenshot](/assets/images/bigfoot_rage_lucid.png)  
 _____________________________________________________________________________ 
+## Project goals and target audience.  
+### Achieved:
+- Build a game with python that is both fun and lets you choose different options and outcomes.
+- Make a website that also has the same theme as the game.
+- Being able to add new options and more content easy in the future.
 
-## User Experience (UX)
+### Future projects: 
+- Add more items to the game and general content.
+- Would love to add some sort of fighting mechanic.
+- More options to create a unique avatar with stats, hp, strength and so on.
+_____________________________________________________________________________ 
+### Audience:
+- This game is for everyone, older people for the nostalgic feel of game and art,
+the younger generation can see and learn how games were back in the days.
+_____________________________________________________________________________ 
 
-
-### User stories    
-_____________________________________________________________________________  
-
-#### First Time Visitor Goals   
-
-As a First Time Visitor, I want to easily understand the main purpose of the site and learn more about the organisation.
-As a First Time Visitor, I want to be able to easily navigate throughout the site to find content.
-As a First Time Visitor, I want to look for testimonials to understand what their users think of them and see if they are trusted. I also want to locate their social media links to see their followings on social media to determine how trusted and known they are.   
-
-#### Returning Visitor Goals     
-
-As a Returning Visitor, I want to find information about coding challenges.
-As a Returning Visitor, I want to find the best way to get in contact with the organisation with any questions I may have.
-As a Returning Visitor, I want to find community links.   
-
-#### Frequent User Goals   
-
-As a Frequent User, I want to check to see if there are any newly added challenges or hackathons.
-As a Frequent User, I want to check to see if there are any new blog posts.
-As a Frequent User, I want to sign up to the Newsletter so that I am emailed any major updates and/or changes to the website or organisation.  
-
-_____________________________________________________________________________  
-
-### Design   
-The whole design is based on 80s/90s video game vibe. The colorful terminal and the   
-bigfoot background image add a nice touch.
+### Design and features:   
+- The whole design is based on 80s/90s video game vibe. The colorful terminal and the bigfoot background image add a nice touch.    
+![Screenshot](/assets/images/website-landing-page.png)       
+- Feature 1 is the button that starts the game. Easily visible.      
+![Screenshot](/assets/images/bigfoot_runprogram.png)       
+- Feature 2 is a footer with links to the creators linkedin and github repository.     
+![Screenshot](/assets/images/bigfoot-footer.png)  
 
 _____________________________________________________________________________  
 
@@ -47,8 +43,29 @@ _____________________________________________________________________________
 Available colors in termcolor below:    
 ![Screenshot](/assets/images/termcolor_palette.png)   
 - Colors from background, that is also used on button and footer    
-![Screenshot](/assets/images/color_palette_background.png) 
+![Screenshot](/assets/images/color-palette.png)  
 
+_____________________________________________________________________________  
+## User Experience (UX)
+- Display_intro - is what greets the user when they start the game, a welcome message and information how to play the game, also let the user type in its name.   
+- start_game_tile_one - Is the first tile of the game, with a intro text that explains your situation and asks you what option you want to pick to continue to play the game.
+![Screenshot](/assets/images/game-tiles-1.png)  
+_____________________________________________________________________________     
+- crossroad_tile_two - Here the user is shown the first of many ascii arts in the game, this shows a spooky tree when you enter crossroads, user will have 4 options, can explore more or even go back to the tent.   
+- cabin_tile_three - Shows the user a cabin in yellow, here are only two options.   
+![Screenshot](/assets/images/game-tiles-2.png)   
+_____________________________________________________________________________  
+- wolf_den_tile_four - Here the user will encounter the wolf, options are to run away with a successrate of 66%, can fight with your fists or use you knife if you have happened to find it.
+- meadows_tile_five - Another crossroad tile, leaves user with 4 options and ascii art of a magenta flower.       
+![Screenshot](/assets/images/game-tiles-3.png)   
+_____________________________________________________________________________ 
+- treehouse_tile_six - Welcomes you with a green ascii image of a treehouse, 3 options, you can explore, stay the night or go back.   
+- bigfoot_tile_seven - Big fight in the game, it's now or never. Theres only one option that will keep you alive!         
+![Screenshot](/assets/images/game-tiles-4.png)   
+_____________________________________________________________________________ 
+- ocean_tile_eight - A beautiful blue palm invites you to the ocean, 3 options and can be the last tile if user has done everything right!
+- escape_tile_nine - Shows when you have finished the game. Big green text "You escaped" and a congratulations.         
+![Screenshot](/assets/images/game-tiles-5.png)     
 _____________________________________________________________________________  
 
 #### Typography
@@ -58,7 +75,7 @@ _____________________________________________________________________________
 
 #### Imagery
 I really wanted the game to be more then text so i used some ascii art from fsymbols,   
-makes the game more alive and eye catching.
+makes the game more alive and eye catching. Used midjourney AI to make the background image.
 
 _____________________________________________________________________________  
  
