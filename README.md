@@ -4,10 +4,12 @@
 ### Will you make it out alive?    
       
 
-### Link to the finished game: [PLAY](https://bigfoot-rage.herokuapp.com/)
+### Link to the finished game: [PLAY](https://bigfoot-rage.herokuapp.com/)    
+_____________________________________________________________________________
+## Am i responsive image 
+![Screenshot](/assets/images/amiresponsive.png)
 _____________________________________________________________________________
 ## Content:
-- [Am i responsive image](#am-i-responsive-image)
 - [Lucid Chart](#lucid-chart)
 - [Project Goals and Audience](#project-goals-and-target-audience)
 - ### Design and UX
@@ -136,7 +138,7 @@ ____________________________________________________________________________
 ## Testing
 
 ### PEP8
-- Pylinter used in gitpod and shows no problems with code.    
+- Pylinter used in gitpod and shows no problems with code. This was done by doing "pip3 install pylinter" command in the terminal and adjusting settings to use it to validate my code.   
 [![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)   
 
 ### Lighthouse
