@@ -1,9 +1,9 @@
-""" Import libraries used the the game """
+""" Import libraries used in the game """
 import random
 import time
 import sys
 from termcolor import cprint
-import images
+import images #contains all ASCII arts used in game
 
 
 run_wolf = [1, 2, 3]
@@ -272,7 +272,8 @@ def wolf_den_tile_four():
 def meadow_tile_five():
     """User reaches a meadow that also is a crossroad with 3 options,
     the 4th option is only known if the user has collected all 3 map pieces.
-    Displays an ASCII art of a flower"""
+    Displays an ASCII art of a flower
+    Same while loop to check if option is in the option list"""
     cprint(images.flowers_img, 'magenta')
     meadow_options = ["1","2","3","4","5"]
     user_choice = ""
@@ -318,7 +319,8 @@ def meadow_tile_five():
 def treehouse_tile_six():
     """User gets to the treehouse, if the user wants to climb up the user loot list append pistol,
     if they already have the pistol = choose another option.
-    stay the night = game over."""
+    stay the night = game over.
+    Same while loop to check if option is in the option list"""
     cprint(images.treehouse_img, 'green')
     treehouse_options = ["1","2","3"]
     user_choice = ""
@@ -363,7 +365,8 @@ def bigfoot_tile_seven():
     """The big fight with the big guy. Here user only survives if they have acquired the pistol,
     when choosing option 4 it will check if the pistol is in the loot list,
     if you do not have the pistol you will need to make a new choice.
-    all other options = game over."""
+    all other options = game over.
+    Same while loop to check if option is in the option list"""
     cprint(images.bigfoot_img, 'red')
     bigfoot_options = ["1","2","3","4"]
     user_choice = ""
@@ -421,7 +424,8 @@ def ocean_tile_eight():
     """User gets to the ocean, the final tile of the game
     Using a raft without a compass in the loot list = game over.
     use a raft and have the compass in the loot list = Success, you escaped!
-    Option 3 gets you a map piece, choose another option if already in loot_map."""
+    Option 3 gets you a map piece, choose another option if already in loot_map.
+    Same while loop to check if option is in the option list"""
     cprint(images.beach_img, 'cyan')
     ocean_options = ["1","2","3"]
     user_choice = ""
@@ -483,7 +487,8 @@ def ocean_tile_eight():
 def escape_tile_nine():
     """ This only shows if the user finishes the game,
     congratulates the user for completing the game!
-    Users will be asked if they want to play again """
+    Users will be asked if they want to play again
+    Same while loop to check if option is in the option list"""
     escape_options = ["y","n"]
     cprint(images.escaped_img, 'green')
     user_choice = ""

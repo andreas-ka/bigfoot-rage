@@ -31,7 +31,7 @@ _____________________________________________________________________________
     - [Deployt to Heroku](#deployment)
 - ### Credits
     - [Code](#code)
-    - [Content](#content)
+    - [Content](#contents)
     - [Media](#media)
     - [Acknowledgements](#acknowledgements)
 
@@ -202,10 +202,10 @@ _____________________________________________________________________________
 - Got help styling the website by looking at Alexa's project, go play it, alot of fun! [Harry Potter Adventure Game](https://github.com/AlexaH88/harry-potter-adventure-game)
 
 
-### Content.  
+### Contents  
 - All content was written by the developer.
 
-### Media.  
+### Media  
 - All ascii art came from [fsymbols](https://stackoverflow.com/questions/53173087/input-in-python-to-be-only-in-string)
 - Background image made in midjourney [Link](https://www.midjourney.com/app/)
 

@@ -37,11 +37,13 @@
             height: 100px;
         }
 
+        /* img styling */
         img {
             z-index: -2;
             display: flex;
         }
 
+        /* body styling */
         body {
             background: url(https://i.imgur.com/hYMvLQ4.png) no-repeat center center fixed;
             -webkit-background-size: cover;
@@ -50,12 +52,44 @@
             background-size: cover;
         }
 
+        /* styling for a element */
         a {
             margin: 4px;
         }
 
         /* media queries */
-        @media (min-width: 300px) and (max-width: 500px)
+        @media (min-width: 300px) and (max-width: 320px) {
+            #footer-social {
+                background-color: #000;
+                width: 400px;
+                height: 50px;
+                font-size: 20px;
+                padding: 0px 20px;
+                border-radius: 30px;
+                text-align: center;
+                padding-top: 10px;
+                color: #fff;
+                border: solid 2px #fff;
+                margin: auto;
+                justify-content: center;
+                margin-left: 20px;
+            }
+
+            button {
+                width: 200px;
+                height: 40px;
+                background-color: #fff;
+                border: 3px solid #000;
+                margin: 20px;
+                border-radius: 8px;
+                z-index: +1;
+                position: absolute;
+                top: 250px;
+                left: 50%;
+                transform: translate(-10%,-50%);
+            }
+        }
+
     </style>
 </head>
 <body>
