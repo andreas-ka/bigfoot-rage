@@ -73,8 +73,8 @@ def display_intro():
 def start_game_tile_one():
     """Start of the game, Tile 1, the first part of the story.
     The user will be prompted to choose between 3 options
-    depending on the choice a different outcome.
-    checks the selected option to the list, if not in the list it
+    depending on the choice, a different outcome.
+    checks the selected option to the list; if not in the list it
     ask you to pick again."""
     start_game_options = ["1","2","3"]
     user_choice = ""
@@ -123,11 +123,11 @@ def start_game_tile_one():
 
 
 def crossroad_tile_two():
-    """Crossroads Tile 2, Here the user will be greeted with 3 options.
+    """Crossroads Tile 2, Here the user will be greeted with three options.
     A while loop checks to see if the users choice is in the crossroad_options list
     if input that function will take place.
     The user must input to move along.
-    Also, an if statement to check if the user already has killed the wolf, if so option blocked"""
+    Also, an if statement to check if the user has already killed the wolf; if so option blocked"""
     crossroad_options = ["1","2","3","4"]
     user_choice = ""
     while user_choice not in crossroad_options:
@@ -166,8 +166,8 @@ def crossroad_tile_two():
 
 def cabin_tile_three():
     """First tile in the game where the user can loot an item.
-    If the user selects option 1 the user finds a knife, append the knife to the loot list
-    If the user already has the knife you have to select a new option."""
+    If the user selects option 1, the user finds a knife, and appends the knife to the loot list.
+    If the user already has the knife, you have to select a new option."""
     cabin_options = ["1","2"]
     user_choice = ""
     while user_choice not in cabin_options:
@@ -202,11 +202,11 @@ def cabin_tile_three():
 
 def wolf_den_tile_four():
     """User encounters the wolf, have to make the call if the user wants to fight or run!
-    If user tries to use his fists it's game over, use the knife and you kill the wolf.
-    If the user selects the run option there is a 66% chance of making it
-    Checks wether the user has the knife or not, if not choose new option.
-    If user kills wolf it gets a piece of the map, append loot_map.
-    And if user already has the other two maps user gets message about easter egg."""
+    If a user tries to use his fists, it's game over, use the knife, and you kill the wolf.
+    If the user selects the run option, there is a 66% chance of making it
+    Check whether the user has the knife; if not, choose a new option.
+    If the user kills the wolf, it gets a piece of the map, append loot_map.
+    And if the user already has the other two maps user receives the message about the easter egg."""
     wolf_options = ["1","2","3"]
     user_choice = ""
     while user_choice not in wolf_options:
@@ -270,10 +270,10 @@ def wolf_den_tile_four():
 
 
 def meadow_tile_five():
-    """User reaches a meadow that also is a crossroad with 3 options,
-    the 4th option is only known if the user has collected all 3 map pieces.
+    """User reaches a meadow that also is a crossroad with three options,
+    the 4th option is only known if the user has collected all three map pieces.
     Displays an ASCII art of a flower
-    Same while loop to check if option is in the option list"""
+    Same while loop to check if the option is in the options list"""
     cprint(images.flowers_img, 'magenta')
     meadow_options = ["1","2","3","4","5"]
     user_choice = ""
@@ -317,7 +317,7 @@ def meadow_tile_five():
 
 
 def treehouse_tile_six():
-    """User gets to the treehouse, if the user wants to climb up the user loot list append pistol,
+    """User gets to the treehouse if the user wants to climb up the user loot list append pistol,
     if they already have the pistol = choose another option.
     stay the night = game over.
     Same while loop to check if option is in the option list"""
@@ -363,10 +363,9 @@ def treehouse_tile_six():
 
 def bigfoot_tile_seven():
     """The big fight with the big guy. Here user only survives if they have acquired the pistol,
-    when choosing option 4 it will check if the pistol is in the loot list,
-    if you do not have the pistol you will need to make a new choice.
-    all other options = game over.
-    Same while loop to check if option is in the option list"""
+    When choosing option 4, it will check if the pistol is in the loot list; if you do not have it, you will need to make a new choice.
+    All other options = game over.
+    Same while loop to check if the option is in the options list"""
     cprint(images.bigfoot_img, 'red')
     bigfoot_options = ["1","2","3","4"]
     user_choice = ""
@@ -423,9 +422,9 @@ def bigfoot_tile_seven():
 def ocean_tile_eight():
     """User gets to the ocean, the final tile of the game
     Using a raft without a compass in the loot list = game over.
-    use a raft and have the compass in the loot list = Success, you escaped!
-    Option 3 gets you a map piece, choose another option if already in loot_map.
-    Same while loop to check if option is in the option list"""
+    Use a raft and have the compass in the loot list = Success; you escaped!
+    Option 3 gets you a map piece; choose another option if already in loot_map.
+    Same while loop to check if the option is in the options list"""
     cprint(images.beach_img, 'cyan')
     ocean_options = ["1","2","3"]
     user_choice = ""
@@ -486,9 +485,9 @@ def ocean_tile_eight():
 
 def escape_tile_nine():
     """ This only shows if the user finishes the game,
-    congratulates the user for completing the game!
+    Congratulations to the user for completing the game!
     Users will be asked if they want to play again
-    Same while loop to check if option is in the option list"""
+    Same while loop to check if the option is in the options list"""
     escape_options = ["y","n"]
     cprint(images.escaped_img, 'green')
     user_choice = ""
@@ -523,7 +522,7 @@ def surprise_tile_ten():
 
 def game_over():
     """ Runs whenever the user dies, displays a random death quote
-    from game_over_message list, also a ascii art of death. 
+    from the game_over_message list, and an ASCII death art. 
     Lets user choose if they want to play again """
     cprint("======================== THANKS FOR PLAYING ========================", 'red')
     print("Want to play again? y/n \n")
