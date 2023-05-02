@@ -10,8 +10,9 @@ _____________________________________________________________________________
 ![Screenshot](/assets/images/amiresponsive.png)
 _____________________________________________________________________________
 ## Content:
-- [Lucid Chart](#lucid-chart)
-- [Project Goals and Audience](#project-goals-and-target-audience)
+- ### Wireframe and project goals 
+    - [Lucid Chart](#lucid-chart)
+    - [Project Goals and Audience](#project-goals-and-target-audience)
 - ### Design and UX
     - [Design and Features](#design-and-features)
     - [Colour Scheme](#colour-scheme)
@@ -63,7 +64,7 @@ _____________________________________________________________________________
 ## Design and Features:   
 - The whole design is based on the 80s/90s video game vibe. The colourful terminal and the bigfoot background image add a nice touch.    
 ![Screenshot](/assets/images/website_landing_page.png)       
-- Feature 1 is the button that starts the game. Easily visible.      
+- Feature 1 is the button that starts the game. Easily visible, inverts colors when hover and changes cursor to a pointer.     
 ![Screenshot](/assets/images/bigfoot_runprogram.png)       
 - Feature 2 is a footer with links to the creator's LinkedIn and GitHub repository.     
 ![Screenshot](/assets/images/bigfoot_footer.png)  
@@ -71,7 +72,7 @@ _____________________________________________________________________________
 ## Colour Scheme
 - Imported termcolor to change the colors in the terminal.
 Available colors in termcolor below:    
-![Screenshot](/assets/images/termcolor_palette.png)   
+![Screenshot](/assets/images/termcolorpalette.png)   
 - Colors from background, that is also used on button and footer    
 ![Screenshot](/assets/images/color_palette.png)  
 _____________________________________________________________________________  
@@ -211,6 +212,7 @@ _____________________________________________________________________________
 
 ### Media  
 - All ASCII art came from [fsymbols](https://stackoverflow.com/questions/53173087/input-in-python-to-be-only-in-string)
+
 - Background image made in midjourney [Link](https://www.midjourney.com/app/)
 
 ### Acknowledgements
