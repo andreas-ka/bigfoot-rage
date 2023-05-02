@@ -63,18 +63,18 @@ The younger generation can see and learn how games were back then.
 _____________________________________________________________________________ 
 ## Design and Features:   
 - The whole design is based on the 80s/90s video game vibe. The colourful terminal and the bigfoot background image add a nice touch.    
-![Screenshot](/assets/images/website-landing-page.png)       
+![Screenshot](/assets/images/website_landing_page.png)       
 - Feature 1 is the button that starts the game. Easily visible.      
 ![Screenshot](/assets/images/bigfoot_runprogram.png)       
 - Feature 2 is a footer with links to the creator's LinkedIn and GitHub repository.     
-![Screenshot](/assets/images/bigfoot-footer.png)  
+![Screenshot](/assets/images/bigfoot_footer.png)  
 _____________________________________________________________________________  
 ## Colour Scheme
 - Imported termcolor to change the colors in the terminal.
 Available colors in termcolor below:    
 ![Screenshot](/assets/images/termcolor_palette.png)   
 - Colors from background, that is also used on button and footer    
-![Screenshot](/assets/images/color-palette.png)  
+![Screenshot](/assets/images/color_palette.png)  
 _____________________________________________________________________________  
 ## User Experience (UX)
 
@@ -88,23 +88,23 @@ _____________________________________________________________________________
 ### Game graphics
 - Display_intro - greets the user when they start the game, gives a welcome message and information on how to play the game, and lets the user type in its name.   
 - start_game_tile_one - This is the first tile of the game, with an intro text that explains your situation and asks you what option you want to pick to continue to play the game.
-![Screenshot](/assets/images/game-tiles-1.png)  
+![Screenshot](/assets/images/game_tiles_1.png)  
 _____________________________________________________________________________     
 - crossroad_tile_two - Here, the user is shown the first of many ascii arts in the game; this shows a spooky tree. When you enter the crossroads, the user will have four options: explore more or even go back to the tent.   
 - cabin_tile_three - Shows the user a cabin in yellow; there are only two options.   
-![Screenshot](/assets/images/game-tiles-2.png)   
+![Screenshot](/assets/images/game_tiles_2.png)   
 _____________________________________________________________________________  
 - wolf_den_tile_four - Here, the user will encounter the wolf; options are to run away with a success rate of 66%, can fight with your Fists or use your knife if you happen to find it.
 - meadows_tile_five - Another crossroad tile leaves the user with four options and ASCII art of a magenta flower.       
-![Screenshot](/assets/images/game-tiles-3.png)   
+![Screenshot](/assets/images/game_tiles_3.png)   
 _____________________________________________________________________________ 
 - treehouse_tile_six - Welcomes you with a green ASCII image of a treehouse, with three options, you can explore, stay the night, or go back.   
 - bigfoot_tile_seven - Big fight in the game; it's now or never. There's only one option that will keep you alive!         
-![Screenshot](/assets/images/game-tiles-4.png)   
+![Screenshot](/assets/images/game_tiles_4.png)   
 _____________________________________________________________________________ 
 - ocean_tile_eight - A beautiful blue palm invites you to the ocean, three options, and it can be the last tile if the user has done Everything right!
 - escape_tile_nine - Shows when you have finished the game. Big green text "You escaped" and congratulations.         
-![Screenshot](/assets/images/game-tiles-5.png)     
+![Screenshot](/assets/images/game_tiles_5.png)     
 _____________________________________________________________________________  
 
 ## Typography
@@ -113,7 +113,7 @@ _____________________________________________________________________________
 ## Imagery
 - I wanted the game to be more than text, so I used some ASCII art from fsymbols, which makes the game more alive and eye-catching.  
 - Used midjourney AI to make the background image.
-![Screenshot](/assets/images/bigfoot-wallpaper1.png)   
+![Screenshot](/assets/images/bigfoot_wallpaper.png)   
 [Back to top](#bigfoot-rage)
 _____________________________________________________________________________  
 ## Languages
