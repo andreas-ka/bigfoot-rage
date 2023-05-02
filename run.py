@@ -216,7 +216,7 @@ def wolf_den_tile_four():
         print("A big wolf appears and wants you for its dinner!")
         print("Now is the time to be brave and smart, what will you do?\n")
         print("1. I tackle the wolf head on with my fists!")
-        print("2. I didn't have my cereals this morning I took my chances and made a RUN for it!!!")
+        print("2. I didn't have my cereals this morning I took my chances and made a RUN for it")
         print("3. Wait a minute, i have a knife, AAATTTAAACCKK!!\n")
         user_choice = input("Which option do you pick 1, 2 or 3? ")
         if user_choice == wolf_options[0]:
