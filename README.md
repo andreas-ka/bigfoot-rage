@@ -154,11 +154,14 @@ Extensive testing was done by myself; a chart of that is available on this Googl
 
 ### Responsiveness and Further Testing
 - The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge, and Safari browsers.
+- Tested on 37" widescreen, 14" macbook and a 13" macbook.
 - Friends and family members were asked to review the site and documentation to identify bugs and user experience issues. 
 - All content in the game has been looked at with Grammarly to check for sentence builds and spellchecking.
 _____________________________________________________________________________  
 ## Fixed Bugs
-- Had a problem with the outcome when you looted map and weapons in random order; fixed by changing how to check the lists and using len(), which works better.   
+- Had a problem with the outcome when you looted map and weapons in random order; fixed by changing how to check the lists and using len(), which works better.  
+
+- Was a bug with the button on deployment, didnt get the correct style sheet.
 
 - Another issue was that if you wanted to play again, the loot lists didn't reset; you had to implement a clear() list function.   
 [Back to top](#bigfoot-rage)
