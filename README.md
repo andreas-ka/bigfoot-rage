@@ -154,14 +154,16 @@ Extensive testing was done by myself; a chart of that is available on this Googl
 
 ### Responsiveness and Further Testing
 - The Website was tested on Google Chrome, Internet Explorer, Microsoft Edge, and Safari browsers.
-- Tested on 37" widescreen, 14" macbook and a 13" macbook.
+- Tested on 37" widescreen, 14" Macbook and a 13" Macbook.
 - Friends and family members were asked to review the site and documentation to identify bugs and user experience issues. 
 - All content in the game has been looked at with Grammarly to check for sentence builds and spellchecking.
 _____________________________________________________________________________  
 ## Fixed Bugs
 - Had a problem with the outcome when you looted map and weapons in random order; fixed by changing how to check the lists and using len(), which works better.  
 
-- Was a bug with the button on deployment, didnt get the correct style sheet.
+- Was a bug with the button on deployment; I didn't get the correct style sheet. Put all styles in index.html
+
+- Fixed the same error I had in a previous project, an error regarding a favicon I don't have. It is a common issue, solved with code in index.html, a comment made to show where in html file.
 
 - Another issue was that if you wanted to play again, the loot lists didn't reset; you had to implement a clear() list function.   
 [Back to top](#bigfoot-rage)
@@ -170,7 +172,7 @@ _____________________________________________________________________________
 ## Deployment
 Was deployed using Heroku with the following steps:
 
-- Login to Heroku (Create an account if necessary)
+- Login to [Heroku](https://www.heroku.com) (Create an account if necessary)
 - Click New in the Heroku dashboard and select ”Create new app.”
 - Write a name for the app and choose your region and click ”Create App.”
 - In the settings tab for the new application, created one Config name PORT and has a value of 8000

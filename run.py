@@ -206,7 +206,7 @@ def wolf_den_tile_four():
     If the user selects the run option, there is a 66% chance of making it
     Check whether the user has the knife; if not, choose a new option.
     If the user kills the wolf, it gets a piece of the map, append loot_map.
-    And if the user already has the other two maps user receives the message about the easter egg."""
+    And if the user already has the other two maps user get the message about the easter egg."""
     wolf_options = ["1","2","3"]
     user_choice = ""
     while user_choice not in wolf_options:
@@ -216,7 +216,7 @@ def wolf_den_tile_four():
         print("A big wolf appears and wants you for its dinner!")
         print("Now is the time to be brave and smart, what will you do?\n")
         print("1. I tackle the wolf head on with my fists!")
-        print("2. I didnt have my cereals this morning i take my chances and make a RUN for it!!!")
+        print("2. I didn't have my cereals this morning I took my chances and made a RUN for it!!!")
         print("3. Wait a minute, i have a knife, AAATTTAAACCKK!!\n")
         user_choice = input("Which option do you pick 1, 2 or 3? ")
         if user_choice == wolf_options[0]:
@@ -363,7 +363,8 @@ def treehouse_tile_six():
 
 def bigfoot_tile_seven():
     """The big fight with the big guy. Here user only survives if they have acquired the pistol,
-    When choosing option 4, it will check if the pistol is in the loot list; if you do not have it, you will need to make a new choice.
+    When choosing option 4, it will check if the pistol is in the loot list; 
+    if you do not have it, you will need to make a new choice.
     All other options = game over.
     Same while loop to check if the option is in the options list"""
     cprint(images.bigfoot_img, 'red')
