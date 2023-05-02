@@ -28,7 +28,7 @@ _____________________________________________________________________________
     - [Responsiveness](#responsiveness-and-further-testing)
     - [Fixed bugs](#fixed-bugs)
 - ### Deployment
-    - [Deployt to Heroku](#deployment)
+    - [Deploy to Heroku](#deployment)
 - ### Credits
     - [Code](#code)
     - [Content](#contents)
@@ -61,7 +61,7 @@ _____________________________________________________________________________
 The younger generation can see and learn how games were back then.   
 [Back to top](#bigfoot-rage)
 _____________________________________________________________________________ 
-## Design and features:   
+## Design and Features:   
 - The whole design is based on the 80s/90s video game vibe. The colourful terminal and the bigfoot background image add a nice touch.    
 ![Screenshot](/assets/images/website-landing-page.png)       
 - Feature 1 is the button that starts the game. Easily visible.      
