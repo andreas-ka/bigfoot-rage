@@ -70,8 +70,9 @@ _____________________________________________________________________________
 - The whole design is based on the 80s/90s video game vibe. The colourful terminal and the bigfoot background image add a nice touch.    
 ![Screenshot](/assets/images/website_landing_page.png)       
 - Feature 1 is the button that starts the game. Easily visible, inverts colors when hover and changes cursor to a pointer.     
-![Screenshot](/assets/images/bigfoot_runprogram.png)       
-- Feature 2 is a footer with links to the creator's LinkedIn and GitHub repository.     
+![Screenshot](/assets/images/run_program.png)
+![Screenshot](/assets/images/run_program_inverted.png)     
+- Feature 2 is a footer with links to the creator's LinkedIn and GitHub repository that opens in a new tab.     
 ![Screenshot](/assets/images/bigfoot_footer.png)  
 _____________________________________________________________________________  
 ## Colour Scheme
