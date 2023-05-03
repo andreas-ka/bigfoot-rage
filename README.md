@@ -208,6 +208,8 @@ _____________________________________________________________________________
 - Another issue was that if you wanted to play again, the loot lists didn't reset; you had to implement a clear() list function.  
 
 - Fixed so the user can type in uppercase letters and still choose to continue the game or quit, added lower() to input.  
+
+- Had a problem when deploying to Heroku that it didn't use my style.css, got help from tutor Jason and solved with a new link that takes the css direct from github.   
 [Back to top](#bigfoot-rage)
 _____________________________________________________________________________  
 
@@ -247,6 +249,8 @@ _____________________________________________________________________________
 - A video by Doug Mcnally on how to make a text-based game used his idea to check for input validation. [video link](https://www.youtube.com/watch?v=miuHrP2O7Jw&ab_channel=DougMcNally)
 
 - Got help styling the website by looking at Alexa's project; play it; a lot of fun! [Harry Potter Adventure Game](https://github.com/AlexaH88/harry-potter-adventure-game)
+
+- The [link](https://stackoverflow.com/questions/7780550/referencing-a-css-file-in-github-repo-as-stylesheet-in-a-html-file) tutor Jason got me that helped me fix the problem loading css on to the site.
 
 
 ### Contents  
