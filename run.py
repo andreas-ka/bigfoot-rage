@@ -75,8 +75,10 @@ def start_game_tile_one():
     """Start of the game, Tile 1, the first part of the story.
     The user will be prompted to choose between 3 options
     depending on the choice, a different outcome.
-    checks the selected option to the list; if not in the list it
-    ask you to pick again."""
+    Checks the selected option to the start_game_options list; if not in the list it
+    ask you to pick again.
+    If option 3 then add 1 to loot_map, if loot_map = 1,2,3 then display suprise tile, if
+    1 already in map_loot show that you already have it."""
     start_game_options = ["1","2","3"]
     user_choice = ""
     while user_choice not in start_game_options:
@@ -168,7 +170,8 @@ def crossroad_tile_two():
 def cabin_tile_three():
     """First tile in the game where the user can loot an item.
     If the user selects option 1, the user finds a knife, and appends the knife to the loot list.
-    If the user already has the knife, you have to select a new option."""
+    If the user already has the knife, you have to select a new option.
+    While loop to check if selected option is in list cabin_options"""
     cabin_options = ["1","2"]
     user_choice = ""
     while user_choice not in cabin_options:
@@ -204,10 +207,11 @@ def cabin_tile_three():
 def wolf_den_tile_four():
     """User encounters the wolf, have to make the call if the user wants to fight or run!
     If a user tries to use his fists, it's game over, use the knife, and you kill the wolf.
-    If the user selects the run option, there is a 66% chance of making it
+    If the user selects the run option, there is a 66% chance random() of making it
     Check whether the user has the knife; if not, choose a new option.
-    If the user kills the wolf, it gets a piece of the map, append loot_map.
-    And if the user already has the other two maps user get the message about the easter egg."""
+    If the user kills the wolf with knife, it gets a piece of the map, append loot_map.
+    And if the user already has the other two maps user get the message about the easter egg.
+    If user already have loot_map 2 then you cant access wolf_den from crossroads."""
     wolf_options = ["1","2","3"]
     user_choice = ""
     while user_choice not in wolf_options:
@@ -274,7 +278,7 @@ def meadow_tile_five():
     """User reaches a meadow that also is a crossroad with three options,
     the 4th option is only known if the user has collected all three map pieces.
     Displays an ASCII art of a flower
-    Same while loop to check if the option is in the options list"""
+    Same while loop to check if the option is in the meadow_options list"""
     cprint(images.flowers_img, 'magenta')
     meadow_options = ["1","2","3","4","5"]
     user_choice = ""
@@ -321,7 +325,7 @@ def treehouse_tile_six():
     """User gets to the treehouse if the user wants to climb up the user loot list append pistol,
     if they already have the pistol = choose another option.
     stay the night = game over.
-    Same while loop to check if option is in the option list"""
+    Same while loop to check if option is in the treehouse_options list"""
     cprint(images.treehouse_img, 'green')
     treehouse_options = ["1","2","3"]
     user_choice = ""
@@ -364,10 +368,10 @@ def treehouse_tile_six():
 
 def bigfoot_tile_seven():
     """The big fight with the big guy. Here user only survives if they have acquired the pistol,
-    When choosing option 4, it will check if the pistol is in the loot list; 
+    When choosing option 4, it will check if the pistol is in the loot_weapon list; 
     if you do not have it, you will need to make a new choice.
     All other options = game over.
-    Same while loop to check if the option is in the options list"""
+    Same while loop to check if the option is in the bigfoot_options list"""
     cprint(images.bigfoot_img, 'red')
     bigfoot_options = ["1","2","3","4"]
     user_choice = ""
@@ -432,7 +436,7 @@ def ocean_tile_eight():
     Using a raft without a compass in the loot list = game over.
     Use a raft and have the compass in the loot list = Success; you escaped!
     Option 3 gets you a map piece; choose another option if already in loot_map.
-    Same while loop to check if the option is in the options list"""
+    Same while loop to check if the option is in the ocean_options list"""
     cprint(images.beach_img, 'cyan')
     ocean_options = ["1","2","3"]
     user_choice = ""
@@ -495,7 +499,7 @@ def escape_tile_nine():
     """ This only shows if the user finishes the game,
     Congratulations to the user for completing the game!
     Users will be asked if they want to play again
-    Same while loop to check if the option is in the options list"""
+    Same while loop to check if the option is in the escape_options list"""
     escape_options = ["y","n"]
     cprint(images.escaped_img, 'green')
     user_choice = ""
@@ -546,6 +550,5 @@ def game_over():
         quit()
     else:
         print("You can only type y for yes or n for no!")
-
 
 main()
