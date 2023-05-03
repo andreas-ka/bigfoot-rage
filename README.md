@@ -63,7 +63,7 @@ _____________________________________________________________________________
 
 ## Audience:
 - This game is for everyone, older people for the nostalgic feel of play and art,
-The younger generation can see and learn how games were back then.   
+the younger generation can see and learn how games were back then.   
 [Back to top](#bigfoot-rage)
 _____________________________________________________________________________ 
 ## Design and Features:   
@@ -101,24 +101,34 @@ _____________________________________________________________________________
  
 
 ### Game graphics
-- Display_intro - greets the user when they start the game, gives a welcome message and information on how to play the game, and lets the user type in its name.   
-- start_game_tile_one - This is the first tile of the game, with an intro text that explains your situation and asks you what option you want to pick to continue to play the game.
+- ### Display_intro 
+    - Greets the user when they start the game, gives a welcome message and information on how to play the game, and lets the user type in its name.   
+- ### start_game_tile_one 
+    - This is the first tile of the game, with an intro text that explains your situation and asks you what option you want to pick to continue to play the game.
 ![Screenshot](/assets/images/game_tiles_1.png)  
 _____________________________________________________________________________     
-- crossroad_tile_two - Here, the user is shown the first of many ascii arts in the game; this shows a spooky tree. When you enter the crossroads, the user will have four options: explore more or even go back to the tent.   
-- cabin_tile_three - Shows the user a cabin in yellow; there are only two options.   
+- ### crossroad_tile_two 
+    - Here, the user is shown the first of many ascii arts in the game; this shows a spooky tree. When you enter the crossroads, the user will have four options: explore more or even go back to the tent.   
+- ### cabin_tile_three 
+    - Shows the user a cabin in yellow; there are only two options.   
 ![Screenshot](/assets/images/game_tiles_2.png)   
 _____________________________________________________________________________  
-- wolf_den_tile_four - Here, the user will encounter the wolf; options are to run away with a success rate of 66%, can fight with your Fists or use your knife if you happen to find it.
-- meadows_tile_five - Another crossroad tile leaves the user with four options and ASCII art of a magenta flower.       
+- ### wolf_den_tile_four 
+    - Here, the user will encounter the wolf, options are to run away with a success rate of 66%, can fight with your Fists or use your knife if you happen to find it.
+- ### meadows_tile_five 
+    - Another crossroad tile leaves the user with four options and ASCII art of a magenta flower.       
 ![Screenshot](/assets/images/game_tiles_3.png)   
 _____________________________________________________________________________ 
-- treehouse_tile_six - Welcomes you with a green ASCII image of a treehouse, with three options, you can explore, stay the night, or go back.   
-- bigfoot_tile_seven - Big fight in the game; it's now or never. There's only one option that will keep you alive!         
+- ### treehouse_tile_six 
+    - Welcomes you with a green ASCII image of a treehouse, with three options, you can explore, stay the night, or go back.   
+- ### bigfoot_tile_seven 
+    - Big fight in the game; it's now or never. There's only one option that will keep you alive!         
 ![Screenshot](/assets/images/game_tiles_4.png)   
 _____________________________________________________________________________ 
-- ocean_tile_eight - A beautiful blue palm invites you to the ocean, three options, and it can be the last tile if the user has done Everything right!
-- escape_tile_nine - Shows when you have finished the game. Big green text "You escaped" and congratulations.         
+- ### ocean_tile_eight 
+    - A beautiful blue palm invites you to the ocean, three options, and it can be the last tile if the user has done Everything right!
+- ### escape_tile_nine 
+    - Shows when you have finished the game. Big green text "You escaped" and congratulations.         
 ![Screenshot](/assets/images/game_tiles_5.png)     
 _____________________________________________________________________________  
 
