@@ -205,7 +205,9 @@ _____________________________________________________________________________
 
 - Fixed the same error I had in a previous project, an error regarding a favicon I don't have. It is a common issue, solved with code in index.html, a comment made to show where in html file.
 
-- Another issue was that if you wanted to play again, the loot lists didn't reset; you had to implement a clear() list function.   
+- Another issue was that if you wanted to play again, the loot lists didn't reset; you had to implement a clear() list function.  
+
+- Fixed so the user can type in uppercase letters and still choose to continue the game or quit, added lower() to input.  
 [Back to top](#bigfoot-rage)
 _____________________________________________________________________________  
 
