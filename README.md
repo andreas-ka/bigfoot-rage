@@ -196,6 +196,7 @@ Extensive testing was done by myself; a chart of that is available on this Googl
 - Tested on 37" widescreen, 14" Macbook and a 13" Macbook.
 - Friends and family members were asked to review the site and documentation to identify bugs and user experience issues. 
 - All content in the game has been looked at with Grammarly to check for sentence builds and spellchecking.
+- Terminal not responsive, that was made by Code Institute.
 _____________________________________________________________________________  
 ## Fixed Bugs
 - Had a problem with the outcome when you looted map and weapons in random order; fixed by changing how to check the lists and using len(), which works better.  

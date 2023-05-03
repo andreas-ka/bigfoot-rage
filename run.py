@@ -52,7 +52,7 @@ def display_intro():
     cprint("Game information:\n", 'yellow')
     print("1. Navigate the forest using printed options")
     print("2. Find loot to help you progress throughout the game")
-    print("3. Maybe there is a easter egg at the end, can you discover it?")
+    print("3. You may discover an Easter egg if you successfully gather all of the loot!")
     print("4. Last but not least SURVIVE!\n")
     print("What's you name fellow traveller?\n")
     username = ""
@@ -508,7 +508,7 @@ def escape_tile_nine():
         print("Well done on completing the game!")
         print("You are truly a survivor!\n")
         print("Want to play again? y/n \n")
-        user_input = str(input(""))
+        user_input = str(input("").lower())
         if user_input == "y":
             time.sleep(2)
             display_intro()
@@ -538,7 +538,7 @@ def game_over():
     Lets user choose if they want to play again """
     cprint("======================== THANKS FOR PLAYING ========================", 'red')
     print("Want to play again? y/n \n")
-    user_input = str(input(""))
+    user_input = str(input("").lower())
     if user_input == "y":
         time.sleep(2)
         display_intro()
