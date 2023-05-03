@@ -395,11 +395,17 @@ def bigfoot_tile_seven():
             time.sleep(3)
             game_over()
         elif user_choice == bigfoot_options[2]:
-            cprint("You are gonna taste my fury big guy, ive got a knife!!", 'yellow')
-            time.sleep(1)
-            cprint(random.choice(game_over_message),'red')
-            cprint(images.dead_img, 'red')
-            game_over()
+            i = 1
+            if i in loot_weapons:
+                cprint("You are gonna taste my fury big guy, ive got a knife!!", 'yellow')
+                time.sleep(1)
+                cprint(random.choice(game_over_message),'red')
+                print(images.dead_img, 'red')
+                game_over()
+            else:
+                print("Hmm you don't seem to have a knife....")
+                time.sleep(1)
+                bigfoot_tile_seven()
         elif user_choice == bigfoot_options[3]:
             i = 2
             if i in loot_weapons:
