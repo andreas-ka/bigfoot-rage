@@ -7,7 +7,7 @@
 ### Link to the finished game: [PLAY](https://bigfoot-rage.herokuapp.com/)    
 _____________________________________________________________________________
 ## Am i responsive image 
-![Screenshot](/assets/images/amiresponsive.png)
+![Screenshot](/assets/images/am_i_responsive.png)
 _____________________________________________________________________________
 ## Content:
 - ### Wireframe and project goals 
@@ -17,7 +17,9 @@ _____________________________________________________________________________
     - [Design and Features](#design-and-features)
     - [Colour Scheme](#colour-scheme)
     - [User Experience](#user-experience-ux)
-        - [User Stories](#user-stories)
+        - [User Stories](#user-experience-ux)
+            - [First-time Visitor](#first-time-visitor-goals)
+            - [Returning Visitor](#returning-visitor-goal)
         - [Game graphics](#game-graphics)
     - [Typography](#typography)
     - [Imagery](#imagery)
@@ -26,6 +28,9 @@ _____________________________________________________________________________
     - [Frameworks, Packages & Programs Used](#frameworks-packages--programs-used)
 - ### Testing
     - [PEP8](#pep8)
+    - [W3 HTML Checker](#w3-html-checker)
+    - [CSS Checker](#w3-css-checker)
+    - [Contrast Checker](#contrast-checker)
     - [Lighthouse](#lighthouse)
     - [Bug testing](#bug-testing)
     - [Responsiveness](#responsiveness-and-further-testing)
@@ -76,14 +81,23 @@ Available colors in termcolor below:
 - Colors from background, that is also used on button and footer    
 ![Screenshot](/assets/images/color_palette.png)  
 _____________________________________________________________________________  
-## User Experience (UX)
+## User Experience (UX)   
 
-### User Stories
-- Play a fun text-based game.
-- Interact with the game through available choices.
-- Have different outcomes based on choices.
-- Get feedback when making choices.
-- Included easter egg that shows a surprise tile if you find all map pieces.      
+### First-Time Visitor Goals
+    - As a first user, I want to understand the website's purpose clearly.
+    - That the main point of the site is prominent and introduces the game.
+    - Let the visitor start the game when they want.
+    - The navigation of the site is easy to understand.
+    - Making sure that the game instructions are easy to understand.
+    - That the game has different outcomes and is fun and captivating.
+    - Who made the game and how to contact him/her.
+
+### Returning Visitor Goal
+    - Play the game again and choose another path, try different inputs.
+    - See if they can find the easter egg. 
+    - Finish the game without dying.
+    - See if new content has been added to the game.
+ 
 
 ### Game graphics
 - Display_intro - greets the user when they start the game, gives a welcome message and information on how to play the game, and lets the user type in its name.   
@@ -112,7 +126,7 @@ _____________________________________________________________________________
 _____________________________________________________________________________
 ## Imagery
 - I wanted the game to be more than text, so I used some ASCII art from fsymbols, which makes the game more alive and eye-catching.  
-- Used midjourney AI to make the background image.
+- Used midjourney AI to make the background image.    
 ![Screenshot](/assets/images/bigfoot_wallpaper.png)   
 [Back to top](#bigfoot-rage)
 _____________________________________________________________________________  
@@ -138,6 +152,20 @@ ____________________________________________________________________________
 ### PEP8
 - Pylinter used in gitpod and shows no problems with code. This was done by doing "pip3 install pylinter" command in the terminal and adjusting settings to use it to validate my code.   
 [![linting: pylint](https://img.shields.io/badge/linting-pylint-yellowgreen)](https://github.com/pylint-dev/pylint)   
+
+### W3 HTML Checker
+- index.html   
+![Screenshot](/assets/images/index_html_validator.png)
+- layout.html   
+![Screenshot](/assets/images/layout_html_validator.png)    
+
+### W3 CSS Checker
+- Used W3's CSS validation service   
+![Screenshot](/assets/images/css_validator.png) 
+
+### Contrast Checker
+- Used [Experte.com](https://www.experte.com/accessibility/contrast) to check contrast on website according to WCAG 2.1 guidelines.        
+![Screenshot](/assets/images/contrast_checker.png)    
 
 ### Lighthouse
 - ### Desktop

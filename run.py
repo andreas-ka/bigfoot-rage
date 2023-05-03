@@ -52,7 +52,8 @@ def display_intro():
     cprint("Game information:\n", 'yellow')
     print("1. Navigate the forest using printed options")
     print("2. Find loot to help you progress throughout the game")
-    print("3. Last but not least SURVIVE!\n")
+    print("3. Maybe there is a easter egg at the end, can you discover it?")
+    print("4. Last but not least SURVIVE!\n")
     print("What's you name fellow traveller?\n")
     username = ""
     loot_map.clear()
