@@ -210,6 +210,8 @@ _____________________________________________________________________________
 - Fixed so the user can type in uppercase letters and still choose to continue the game or quit, added lower() to input.  
 
 - Had a problem when deploying to Heroku that it didn't use my style.css, got help from tutor Jason and solved with a new link that takes the css direct from github.   
+
+- Big creds to tutor Rebecca that helped me fix a strange issue with HTML validation, showed alot of stray elements. Changed postion on scripts and that seemed to sort it.   
 [Back to top](#bigfoot-rage)
 _____________________________________________________________________________  
 

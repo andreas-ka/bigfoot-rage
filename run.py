@@ -401,7 +401,7 @@ def bigfoot_tile_seven():
         elif user_choice == bigfoot_options[2]:
             i = 1
             if i in loot_weapons:
-                cprint("You are gonna taste my fury big guy, ive got a knife!!", 'yellow')
+                cprint("You are gonna taste my fury big guy, I've got a knife!!", 'yellow')
                 time.sleep(1)
                 cprint(random.choice(game_over_message),'red')
                 print(images.dead_img, 'red')
@@ -415,8 +415,8 @@ def bigfoot_tile_seven():
             if i in loot_weapons:
                 print("You fire your pistol at the bigfoot...")
                 time.sleep(2)
-                cprint("The big guy makes a last loud growl", 'green')
-                cprint("while falling down to the ground, you did it!!!", 'green')
+                cprint("The big guy makes one last growl while falling down to the ground", 'green')
+                cprint("you did it!!!", 'green')
                 cprint("Wait, he dropped something, i need to investigate...", 'green')
                 time.sleep(1)
                 cprint("Its a compass, should be useful! Lets continue...", 'yellow')
